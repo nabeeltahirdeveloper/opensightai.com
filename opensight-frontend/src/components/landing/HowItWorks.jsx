@@ -172,17 +172,7 @@ export default function HowItWorks() {
             >
               Start Free Trial →
             </button>
-            <button
-              className="px-7 py-3.5 rounded-full font-semibold text-sm cursor-pointer transition-all duration-300 hover:-translate-y-0.5 whitespace-nowrap"
-              style={{
-                border:'1.5px solid rgba(245,166,35,.35)',
-                background:'transparent',color:'var(--ink)',fontFamily:'inherit',
-              }}
-              onMouseEnter={e=>{e.currentTarget.style.borderColor='#F5A623';e.currentTarget.style.color='#F5A623';e.currentTarget.style.background='rgba(245,166,35,.07)'}}
-              onMouseLeave={e=>{e.currentTarget.style.borderColor='rgba(245,166,35,.35)';e.currentTarget.style.color='var(--ink)';e.currentTarget.style.background='transparent'}}
-            >
-              Watch Demo
-            </button>
+            
           </div>
         </div>
       </div>

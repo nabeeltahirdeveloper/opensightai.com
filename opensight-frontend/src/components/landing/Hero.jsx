@@ -432,11 +432,7 @@ export default function Hero() {
         {/* ── LEFT PANEL ── */}
         <div>
 
-          {/* Promo pill */}
-          <div style={{ display:'inline-flex', alignItems:'center', gap:8, padding:'6px 16px', borderRadius:20, fontSize:12, fontWeight:700, marginBottom:18, background:'rgba(245,166,35,.1)', border:'1px solid rgba(245,166,35,.28)', color:'#F5A623', animation:'fadeUp .5s ease both' }}>
-            <span style={{ width:7, height:7, borderRadius:'50%', background:'#F5A623', boxShadow:'0 0 8px #F5A623', display:'inline-block', animation:'blink 2s infinite' }} />
-            Limited Time: 70% OFF All Challenges
-          </div>
+          
 
           {/* Stars */}
           <div style={{ display:'flex', alignItems:'center', gap:3, marginBottom:14, animation:'fadeUp .5s .07s ease both' }}>
@@ -464,11 +460,7 @@ export default function Hero() {
               onMouseLeave={e => { e.currentTarget.style.transform=''; e.currentTarget.style.boxShadow='0 6px 28px rgba(245,166,35,.4)' }}>
               Start Free Trial →
             </button>
-            <button style={{ padding:'13px 28px', borderRadius:30, fontWeight:600, fontSize:15, cursor:'pointer', fontFamily:'inherit', background:'transparent', color:'var(--ink)', border:'1.5px solid rgba(245,166,35,.35)', transition:'all .3s' }}
-              onMouseEnter={e => { e.currentTarget.style.borderColor='#F5A623'; e.currentTarget.style.color='#F5A623'; e.currentTarget.style.transform='translateY(-2px)' }}
-              onMouseLeave={e => { e.currentTarget.style.borderColor='rgba(245,166,35,.35)'; e.currentTarget.style.color='var(--ink)'; e.currentTarget.style.transform='' }}>
-              ▷&nbsp;&nbsp;Watch Demo
-            </button>
+            
           </div>
 
           {/* Trust line */}

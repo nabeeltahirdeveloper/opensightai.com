@@ -344,9 +344,7 @@ export default function Testimonials() {
             </span>
           </h2>
 
-          <p className="tm-title-in" style={{ animationDelay: '160ms', fontSize: 'clamp(14px,2vw,17px)', color: muted, maxWidth: 540, margin: '0 auto', lineHeight: 1.7 }}>
-            From scrappy startups to Fortune 500 teams — see why thousands of developers and product teams choose OpenSightAI.
-          </p>
+          
         </div>
 
         {/* Stats row */}
