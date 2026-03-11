@@ -1,0 +1,18 @@
+node_modules/*
+node_modules/.yarn-integrity
+.env
+env.example
+
+# Logs
+*.log
+logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+
+# Markdown files
+*.md
+config.bat

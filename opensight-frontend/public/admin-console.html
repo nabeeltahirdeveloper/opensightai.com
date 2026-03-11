@@ -1,0 +1,2015 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)https://jazqfpqk.gensparkspace.com/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenSightAI - Advanced Admin Console</title>
+    <link href="./OpenSightAI - Advanced Admin Console_files/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./OpenSightAI - Advanced Admin Console_files/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="./OpenSightAI - Advanced Admin Console_files/css2" rel="stylesheet">
+    <script src="./OpenSightAI - Advanced Admin Console_files/chart.js"></script>
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+            min-height: 100vh;
+        }
+        
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+        }
+        
+        .neon-border {
+            border: 1px solid #00d4ff;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #00d4ff, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .sidebar {
+            background: rgba(15, 15, 35, 0.9);
+            backdrop-filter: blur(20px);
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .nav-item {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            margin: 4px 0;
+        }
+        
+        .nav-item:hover {
+            background: rgba(0, 212, 255, 0.1);
+            border-left: 3px solid #00d4ff;
+        }
+        
+        .nav-item.active {
+            background: rgba(124, 58, 237, 0.2);
+            border-left: 3px solid #7c3aed;
+        }
+        
+        .metric-card {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(124, 58, 237, 0.1));
+            border: 1px solid rgba(0, 212, 255, 0.2);
+        }
+        
+        .chart-container {
+            height: 300px;
+            position: relative;
+        }
+        
+        .table-container {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+        .status-badge {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .status-active {
+            background: rgba(34, 197, 94, 0.2);
+            color: #22c55e;
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+        
+        .status-pending {
+            background: rgba(251, 191, 36, 0.2);
+            color: #fbbf24;
+            border: 1px solid rgba(251, 191, 36, 0.3);
+        }
+        
+        .status-inactive {
+            background: rgba(239, 68, 68, 0.2);
+            color: #ef4444;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+        
+        .action-btn {
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            border: 1px solid transparent;
+        }
+        
+        .btn-primary {
+            background: rgba(0, 212, 255, 0.2);
+            color: #00d4ff;
+            border-color: rgba(0, 212, 255, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background: rgba(0, 212, 255, 0.3);
+        }
+        
+        .btn-secondary {
+            background: rgba(124, 58, 237, 0.2);
+            color: #7c3aed;
+            border-color: rgba(124, 58, 237, 0.3);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(124, 58, 237, 0.3);
+        }
+        
+        .btn-danger {
+            background: rgba(239, 68, 68, 0.2);
+            color: #ef4444;
+            border-color: rgba(239, 68, 68, 0.3);
+        }
+        
+        .btn-danger:hover {
+            background: rgba(239, 68, 68, 0.3);
+        }
+        
+        .search-input {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: #00d4ff;
+            box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1);
+        }
+        
+        .dropdown {
+            background: rgba(15, 15, 35, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .content-section {
+            display: none;
+        }
+        
+        .content-section.active {
+            display: block;
+        }
+        
+         {
+            .sidebar {
+                display: none;
+            }
+            .main-content {
+                margin-left: 0 !important;
+            }
+        }
+    </style>
+<style>
+    .genspark-notice-dialog {
+      display: flex;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 10001;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .genspark-notice-content {
+      background-color: white;
+      border-radius: 8px;
+      max-width: 600px;
+      width: 90%;
+      box-sizing: border-box;
+      padding: 10px 30px 30px 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      font-size: 16px;
+    }
+
+    .genspark-notice-title {
+      color: #000;
+      font-family: Arial;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 150%; 
+    }
+
+    .genspark-notice-list {
+      margin: 24px 0;
+      
+      color: #606366;
+      font-family: Arial;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      padding-left: 12px;
+    }
+
+    .genspark-notice-list li {
+      margin-bottom: 12px;
+      list-style-type: disc;
+    }
+
+    .genspark-notice-list li a {
+      color: #606366;
+      text-decoration: underline;
+    }
+
+    .genspark-notice-checkbox {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+      gap: 10px;
+
+      color: #232425;
+
+      font-family: Arial;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .genspark-notice-actions {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+      
+    .genspark-notice-ok {
+      color: #232425;
+
+      text-align: center;
+      font-family: Arial;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 150%; 
+
+      cursor: pointer;
+      display: flex;
+      height: 40px;
+      padding: 6px 14px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      align-self: stretch;
+      border-radius: 8px;
+      border: 1px solid #000;
+      box-sizing: border-box;
+      width: 100%;
+    }
+  </style></head>
+<body class="text-white">
+    <!-- Sidebar -->
+    <div class="sidebar fixed left-0 top-0 h-full w-64 p-6 z-50">
+        <div class="flex items-center space-x-3 mb-8">
+            <div class="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
+                <i class="fas fa-chart-line text-white"></i>
+            </div>
+            <div>
+                <h1 class="text-xl font-bold gradient-text">OpenSightAI</h1>
+                <p class="text-xs text-gray-400 mono">Admin Console</p>
+            </div>
+        </div>
+        
+        <nav class="space-y-2">
+            <div class="nav-item active p-3 cursor-pointer" onclick="showSection(&#39;dashboard&#39;)">
+                <i class="fas fa-tachometer-alt mr-3 text-purple-400"></i>
+                <span>Dashboard</span>
+            </div>
+            <div class="nav-item p-3 cursor-pointer" onclick="showSection(&#39;orders&#39;)">
+                <i class="fas fa-shopping-cart mr-3 text-cyan-400"></i>
+                <span>Orders</span>
+            </div>
+            <div class="nav-item p-3 cursor-pointer" onclick="showSection(&#39;users&#39;)">
+                <i class="fas fa-users mr-3 text-green-400"></i>
+                <span>Users</span>
+            </div>
+            <div class="nav-item p-3 cursor-pointer" onclick="showSection(&#39;brands&#39;)">
+                <i class="fas fa-building mr-3 text-yellow-400"></i>
+                <span>Brands Management</span>
+            </div>
+            <div class="nav-item p-3 cursor-pointer" onclick="showSection(&#39;packages&#39;)">
+                <i class="fas fa-box mr-3 text-pink-400"></i>
+                <span>Packages</span>
+            </div>
+            <div class="nav-item p-3 cursor-pointer" onclick="showSection(&#39;analytics&#39;)">
+                <i class="fas fa-chart-bar mr-3 text-indigo-400"></i>
+                <span>Analytics</span>
+            </div>
+            <div class="nav-item p-3 cursor-pointer" onclick="showSection(&#39;settings&#39;)">
+                <i class="fas fa-cog mr-3 text-gray-400"></i>
+                <span>Settings</span>
+            </div>
+        </nav>
+        
+        <div class="absolute bottom-6 left-6 right-6">
+            <div class="glass-card p-4 text-center">
+                <div class="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-2 flex items-center justify-center">
+                    <i class="fas fa-user text-white"></i>
+                </div>
+                <p class="text-sm font-medium">Admin User</p>
+                <p class="text-xs text-gray-400">admin@OpenSightai.com</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content ml-64 p-6">
+        <!-- Dashboard Section -->
+        <div id="dashboard" class="content-section active">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-3xl font-bold gradient-text">Dashboard Overview</h2>
+                <div class="flex space-x-4">
+                    <button class="action-btn btn-primary">
+                        <i class="fas fa-sync-alt mr-2"></i>Refresh
+                    </button>
+                    <button class="action-btn btn-secondary">
+                        <i class="fas fa-download mr-2"></i>Export
+                    </button>
+                    <button class="action-btn btn-danger" onclick="window.top.location.href='/dashboard'">
+                        <i class="fas fa-arrow-left mr-2"></i>Switch to User Dashboard
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Key Metrics -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                <div class="metric-card glass-card p-6 rounded-xl" id="metric-revenue">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-400 text-sm">Total Revenue</p>
+                            <p class="text-2xl font-bold text-cyan-400" id="metric-revenue-value">$0</p>
+                            <p class="text-green-400 text-xs"><i class="fas fa-arrow-up mr-1"></i>12.5%</p>
+                        </div>
+                        <i class="fas fa-dollar-sign text-3xl text-cyan-400 opacity-20"></i>
+                    </div>
+                </div>
+                
+                <div class="metric-card glass-card p-6 rounded-xl" id="metric-users">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-400 text-sm">Active Users</p>
+                            <p class="text-2xl font-bold text-purple-400" id="metric-users-value">0</p>
+                            <p class="text-green-400 text-xs"><i class="fas fa-arrow-up mr-1"></i>8.3%</p>
+                        </div>
+                        <i class="fas fa-users text-3xl text-purple-400 opacity-20"></i>
+                    </div>
+                </div>
+                
+                <div class="metric-card glass-card p-6 rounded-xl" id="metric-orders">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-400 text-sm">Total Orders</p>
+                            <p class="text-2xl font-bold text-green-400" id="metric-orders-value">0</p>
+                            <p class="text-green-400 text-xs"><i class="fas fa-arrow-up mr-1"></i>15.7%</p>
+                        </div>
+                        <i class="fas fa-shopping-cart text-3xl text-green-400 opacity-20"></i>
+                    </div>
+                </div>
+                
+                <div class="metric-card glass-card p-6 rounded-xl" id="metric-credits">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-400 text-sm">Credits Used</p>
+                            <p class="text-2xl font-bold text-yellow-400" id="metric-credits-value">0</p>
+                            <p class="text-green-400 text-xs"><i class="fas fa-arrow-up mr-1"></i>22.1%</p>
+                        </div>
+                        <i class="fas fa-coins text-3xl text-yellow-400 opacity-20"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Charts Row -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+                <div class="glass-panel p-6">
+                    <h3 class="text-xl font-semibold mb-4">Revenue Overview</h3>
+                    <div class="chart-container">
+                        <canvas id="revenueChart" width="1066" height="300" style="display: block; box-sizing: border-box; height: 300px; width: 1066px;"></canvas>
+                    </div>
+                </div>
+                
+                <div class="glass-panel p-6">
+                    <h3 class="text-xl font-semibold mb-4">User Activity</h3>
+                    <div class="chart-container">
+                        <canvas id="activityChart" width="1066" height="300" style="display: block; box-sizing: border-box; height: 300px; width: 1066px;"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Recent Activity -->
+            <div class="glass-panel p-6" id="recent-activity">
+                <h3 class="text-xl font-semibold mb-4">Recent Activity</h3>
+                <div class="space-y-4" id="recent-activity-list"></div>
+            </div>
+        </div>
+
+        <!-- Orders Section -->
+        <div id="orders" class="content-section">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-3xl font-bold gradient-text">Order Management</h2>
+                <button class="action-btn btn-primary" id="order-new">
+                    <i class="fas fa-plus mr-2"></i>Add Order
+                </button>
+                <button class="action-btn btn-danger" onclick="window.top.location.href='/dashboard'">
+                    <i class="fas fa-arrow-left mr-2"></i>Switch to User Dashboard
+                </button>
+            </div>
+            
+            <!-- Search and Filters -->
+            <div class="glass-panel p-6 mb-6">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <input id="orders-search" type="text" placeholder="Search orders..." class="search-input p-3 rounded-lg">
+                    <select id="orders-status" class="search-input p-3 rounded-lg">
+                        <option value="all">All Status</option>
+                        <option value="paid">Completed</option>
+                        <option value="pending">Pending</option>
+                        <option value="cancelled">Cancelled</option>
+                    </select>
+                    <select id="orders-package" class="search-input p-3 rounded-lg">
+                        <option value="">All Packages</option>
+                        <option value="starter">Starter</option>
+                        <option value="professional">Professional</option>
+                        <option value="expert">Expert</option>
+                    </select>
+                    <input id="orders-date" type="date" class="search-input p-3 rounded-lg">
+                </div>
+            </div>
+            
+            <!-- Orders Table -->
+            <div class="glass-panel p-6">
+                <div class="table-container">
+                    <table class="w-full" id="orders-table">
+                        <thead class="border-b border-gray-700">
+                            <tr>
+                                <th class="text-left p-4">Order ID</th>
+                                <th class="text-left p-4">Customer</th>
+                                <th class="text-left p-4">Package</th>
+                                <th class="text-left p-4">Amount</th>
+                                <th class="text-left p-4">Status</th>
+                                <th class="text-left p-4">Date</th>
+                                <th class="text-left p-4">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="orders-tbody"></tbody>
+                    </table>
+                </div>
+                <div class="flex justify-between items-center mt-4">
+                    <button class="action-btn btn-secondary" id="orders-prev">Prev</button>
+                    <div class="text-sm text-gray-400" id="orders-page-info"></div>
+                    <button class="action-btn btn-secondary" id="orders-next">Next</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Users Section -->
+        <div id="users" class="content-section">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-3xl font-bold gradient-text">User Management</h2>
+                <div class="flex space-x-4">
+                    <button class="action-btn btn-primary" id="user-new">
+                    <i class="fas fa-user-plus mr-2"></i>Add User
+                </button>
+                <button class="action-btn btn-danger" onclick="window.top.location.href='/dashboard'">
+                    <i class="fas fa-arrow-left mr-2"></i>Switch to User Dashboard
+                </button>
+                </div>
+            </div>
+            
+            <!-- User Stats -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
+                <div class="glass-card p-6 rounded-xl">
+                    <h3 class="text-lg font-semibold mb-2">Total Users</h3>
+                    <p class="text-3xl font-bold text-cyan-400" id="users-stat-total">0</p>
+                </div>
+                <div class="glass-card p-6 rounded-xl">
+                    <h3 class="text-lg font-semibold mb-2">Starter Plan</h3>
+                    <p class="text-3xl font-bold text-green-400" id="users-stat-starter">0</p>
+                </div>
+                <div class="glass-card p-6 rounded-xl">
+                    <h3 class="text-lg font-semibold mb-2">Pro Plan</h3>
+                    <p class="text-3xl font-bold text-purple-400" id="users-stat-pro">0</p>
+                </div>
+                <div class="glass-card p-6 rounded-xl">
+                    <h3 class="text-lg font-semibold mb-2">Expert Plan</h3>
+                    <p class="text-3xl font-bold text-yellow-400" id="users-stat-expert">0</p>
+                </div>
+            </div>
+            
+            <!-- Users Table -->
+            <div class="glass-panel p-6">
+                <div class="mb-4">
+                    <input id="users-search" type="text" placeholder="Search users by name or email..." class="search-input p-3 rounded-lg w-full">
+                </div>
+                <div class="table-container" style="max-height: 600px;">
+                    <table class="w-full" id="users-table">
+                        <thead class="border-b border-gray-700 sticky top-0 bg-gray-900">
+                            <tr>
+                                <th class="text-left p-4">User</th>
+                                <th class="text-left p-4">Email</th>
+                                <th class="text-left p-4">Role</th>
+                                <th class="text-left p-4">Subscription Tier</th>
+                                <th class="text-left p-4">Credits</th>
+                                <th class="text-left p-4">Created</th>
+                            </tr>
+                        </thead>
+                        <tbody id="users-tbody">
+                            <tr>
+                                <td colspan="6" class="p-4 text-center text-gray-400">
+                                    <i class="fas fa-spinner fa-spin mr-2"></i>Loading users...
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Brands Management Section -->
+        <div id="brands" class="content-section">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-3xl font-bold gradient-text">Brands Management</h2>
+                <button class="action-btn btn-primary">
+                    <i class="fas fa-plus mr-2"></i>Add Brand Partner
+                </button>
+            </div>
+            
+            <!-- Brand Stats -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
+                <div class="glass-card p-6 rounded-xl">
+                    <h3 class="text-lg font-semibold mb-2">Active Brands</h3>
+                    <p class="text-3xl font-bold text-cyan-400">24</p>
+                </div>
+                <div class="glass-card p-6 rounded-xl">
+                    <h3 class="text-lg font-semibold mb-2">White Label Clients</h3>
+                    <p class="text-3xl font-bold text-purple-400">8</p>
+                </div>
+                <div class="glass-card p-6 rounded-xl">
+                    <h3 class="text-lg font-semibold mb-2">Revenue Share</h3>
+                    <p class="text-3xl font-bold text-green-400">$12,450</p>
+                </div>
+                <div class="glass-card p-6 rounded-xl">
+                    <h3 class="text-lg font-semibold mb-2">Custom Configs</h3>
+                    <p class="text-3xl font-bold text-yellow-400">15</p>
+                </div>
+            </div>
+            
+            <!-- Brands Table -->
+            <div class="glass-panel p-6">
+                <div class="table-container">
+                    <table class="w-full">
+                        <thead class="border-b border-gray-700">
+                            <tr>
+                                <th class="text-left p-4">Brand</th>
+                                <th class="text-left p-4">Type</th>
+                                <th class="text-left p-4">Revenue</th>
+                                <th class="text-left p-4">Users</th>
+                                <th class="text-left p-4">Status</th>
+                                <th class="text-left p-4">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-gray-800 hover:bg-gray-800/30">
+                                <td class="p-4">
+                                    <div class="flex items-center space-x-3">
+                                        <div class="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg"></div>
+                                        <span>FinTech Solutions</span>
+                                    </div>
+                                </td>
+                                <td class="p-4">White Label</td>
+                                <td class="p-4">$5,240</td>
+                                <td class="p-4">1,234</td>
+                                <td class="p-4"><span class="status-badge status-active">Active</span></td>
+                                <td class="p-4">
+                                    <div class="flex space-x-2">
+                                        <button class="action-btn btn-primary">Configure</button>
+                                        <button class="action-btn btn-secondary">View</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Packages Section -->
+        <div id="packages" class="content-section">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-3xl font-bold gradient-text">Package Management</h2>
+                <button class="action-btn btn-primary">
+                    <i class="fas fa-plus mr-2"></i>Create Package
+                </button>
+            </div>
+            
+            <!-- Package Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="glass-card p-6 rounded-xl">
+                    <h3 class="text-xl font-bold mb-2">Essential</h3>
+                    <p class="text-3xl font-bold text-cyan-400 mb-4">$59</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="text-sm text-gray-300">• 50 Credits</li>
+                        <li class="text-sm text-gray-300">• Basic Features</li>
+                        <li class="text-sm text-gray-300">• Email Support</li>
+                    </ul>
+                    <div class="flex space-x-2">
+                        <button class="action-btn btn-primary flex-1">Edit</button>
+                        <button class="action-btn btn-secondary">Clone</button>
+                    </div>
+                </div>
+                
+                <div class="glass-card p-6 rounded-xl neon-border">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold">Professional</h3>
+                        <span class="text-xs bg-cyan-500 text-black px-2 py-1 rounded">POPULAR</span>
+                    </div>
+                    <p class="text-3xl font-bold text-purple-400 mb-4">$179</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="text-sm text-gray-300">• 150 Credits</li>
+                        <li class="text-sm text-gray-300">• Advanced Features</li>
+                        <li class="text-sm text-gray-300">• Priority Support</li>
+                    </ul>
+                    <div class="flex space-x-2">
+                        <button class="action-btn btn-primary flex-1">Edit</button>
+                        <button class="action-btn btn-secondary">Clone</button>
+                    </div>
+                </div>
+                
+                <div class="glass-card p-6 rounded-xl">
+                    <h3 class="text-xl font-bold mb-2">Expert</h3>
+                    <p class="text-3xl font-bold text-green-400 mb-4">$449</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="text-sm text-gray-300">• 1000 Credits</li>
+                        <li class="text-sm text-gray-300">• All Features</li>
+                        <li class="text-sm text-gray-300">• 24/7 Support</li>
+                    </ul>
+                    <div class="flex space-x-2">
+                        <button class="action-btn btn-primary flex-1">Edit</button>
+                        <button class="action-btn btn-secondary">Clone</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Analytics Section -->
+        <div id="analytics" class="content-section">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-3xl font-bold gradient-text">Advanced Analytics</h2>
+                <div class="flex space-x-4">
+                    <select class="search-input p-2 rounded-lg">
+                        <option>Last 30 days</option>
+                        <option>Last 90 days</option>
+                        <option>Last year</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Analytics Charts -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="glass-panel p-6">
+                    <h3 class="text-xl font-semibold mb-4">Revenue Analytics</h3>
+                    <div class="chart-container">
+                        <canvas id="analyticsRevenueChart" height="0" style="display: block; box-sizing: border-box; height: 0px; width: 0px;" width="0"></canvas>
+                    </div>
+                </div>
+                
+                <div class="glass-panel p-6">
+                    <h3 class="text-xl font-semibold mb-4">Package Distribution</h3>
+                    <div class="chart-container">
+                        <canvas id="packageChart" height="0" style="display: block; box-sizing: border-box; height: 0px; width: 0px;" width="0"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Settings Section -->
+        <div id="settings" class="content-section">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-3xl font-bold gradient-text">System Settings</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="glass-panel p-6">
+                    <h3 class="text-xl font-semibold mb-4">General Settings</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Platform Name</label>
+                            <input type="text" value="OpenSightAI" class="search-input p-3 rounded-lg w-full">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Admin Email</label>
+                            <input type="email" value="admin@OpenSightai.com" class="search-input p-3 rounded-lg w-full">
+                        </div>
+                        <button class="action-btn btn-primary">Save Changes</button>
+                    </div>
+                </div>
+                
+                <div class="glass-panel p-6">
+                    <h3 class="text-xl font-semibold mb-4">Security Settings</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span>Two-Factor Authentication</span>
+                            <button class="action-btn btn-primary">Enable</button>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>Session Timeout</span>
+                            <select class="search-input p-2 rounded-lg">
+                                <option>30 minutes</option>
+                                <option>1 hour</option>
+                                <option>4 hours</option>
+                            </select>
+                        </div>
+                        <button class="action-btn btn-primary">Update Security</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Navigation
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Remove active class from nav items
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Add active class to clicked nav item
+            event.target.closest('.nav-item').classList.add('active');
+        }
+
+        function getAuthHeaders() {
+            try {
+                const token = window.top?.localStorage?.getItem('vs_auth_token') || localStorage.getItem('vs_auth_token');
+                return token ? { 'authorization': `Bearer ${token}` } : {};
+            } catch (e) { return {}; }
+        }
+
+        function getApiUrl() {
+            // Check if we're in development (localhost) or production
+            const hostname = window.location.hostname;
+            if (hostname === 'localhost' || hostname === '127.0.0.1') {
+                return 'https://api-dev.OpenSightai.com/api';
+            }
+            // In production, use relative URL (same origin)
+            return '/api';
+        }
+
+        // Charts
+        async function fetchAdminOverview() {
+            try {
+                const res = await fetch(`${getApiUrl()}/admin/analytics/overview`, { credentials: 'include', headers: { 'content-type': 'application/json', ...getAuthHeaders() } });
+                if (!res.ok) return;
+                const data = await res.json();
+                const fmt = (n) => new Intl.NumberFormat('en-US', { maximumFractionDigits: 0 }).format(Number(n || 0));
+                const currencyFmt = (n) => '$' + new Intl.NumberFormat('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 }).format(Number(n || 0));
+                document.getElementById('metric-revenue-value').textContent = currencyFmt(data?.totals?.revenue || 0);
+                document.getElementById('metric-users-value').textContent = fmt(data?.totals?.users || 0);
+                document.getElementById('metric-orders-value').textContent = fmt(data?.totals?.orders || 0);
+                document.getElementById('metric-credits-value').textContent = fmt(data?.totals?.credits_used || 0);
+                // Render recent orders as activity fallback when activities endpoint not available
+                if (Array.isArray(data?.recent_orders)) {
+                    const host = document.getElementById('recent-activity-list');
+                    if (host) {
+                        host.innerHTML = '';
+                        data.recent_orders.slice(0, 5).forEach(o => {
+                            const div = document.createElement('div');
+                            div.className = 'flex items-center justify-between p-4 glass-card rounded-lg';
+                            div.innerHTML = `
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-shopping-cart text-white"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-medium">Order ${o.order_id || ''}</p>
+                                        <p class="text-sm text-gray-400">${o.email || ''} - $${Number(o.total_amount || 0)}</p>
+                                    </div>
+                                </div>
+                                <span class="text-sm text-gray-400">${new Date(o.created_at).toLocaleString()}</span>
+                            `;
+                            host.appendChild(div);
+                        });
+                    }
+                }
+            } catch (e) {}
+        }
+
+        async function fetchAdminTimeseries() {
+            try {
+                const res = await fetch(`${getApiUrl()}/admin/analytics/timeseries?days=30`, { credentials: 'include', headers: { 'content-type': 'application/json', ...getAuthHeaders() } });
+                if (!res.ok) return null;
+                return await res.json();
+            } catch (e) { return null; }
+        }
+
+        async function fetchAdminActivities() {
+            try {
+                const res = await fetch(`${getApiUrl()}/admin/analytics/activities`, { credentials: 'include', headers: { 'content-type': 'application/json', ...getAuthHeaders() } });
+                if (!res.ok) return null;
+                return await res.json();
+            } catch (e) { return null; }
+        }
+
+        // Orders CRUD and table binding
+        let ordersState = { page: 1, pageSize: 20, total: 0, q: '', status: 'all', pkg: '', date: '', from: '', to: '' };
+
+        async function loadOrders() {
+            const params = new URLSearchParams({
+                page: String(ordersState.page),
+                pageSize: String(ordersState.pageSize),
+                ...(ordersState.q ? { q: ordersState.q } : {}),
+                ...(ordersState.status && ordersState.status !== 'all' ? { status: ordersState.status } : {}),
+                ...(ordersState.pkg ? { package: ordersState.pkg } : {}),
+                ...(ordersState.date ? { date: ordersState.date } : {}),
+                ...(ordersState.from ? { from: ordersState.from } : {}),
+                ...(ordersState.to ? { to: ordersState.to } : {}),
+            }).toString();
+            const res = await fetch(`${getApiUrl()}/admin/orders?${params}`, { credentials: 'include', headers: { 'content-type': 'application/json', ...getAuthHeaders() } });
+            if (!res.ok) return;
+            const data = await res.json();
+            const tbody = document.getElementById('orders-tbody');
+            const pageInfo = document.getElementById('orders-page-info');
+            if (!tbody) return;
+            tbody.innerHTML = '';
+            const orders = data.orders || [];
+            orders.forEach(o => {
+                const pkg = (() => {
+                    try {
+                        const arr = Array.isArray(o.items) ? o.items : []; 
+                        const p = arr.find(it => (it?.type||'').toLowerCase() === 'package')
+                        const c = arr.find(it => (it?.type||'').toLowerCase() === 'credits')
+                        const pkgName = p ? (p.name || p.id || 'Package') : '';
+                        const credits = c ? (c.unlimited ? 'Unlimited' : (c.credits ? `${c.credits} Credits` : '')) : '';
+                        return [pkgName, credits].filter(Boolean).join(' - ');
+                    } catch (e) { return '' }
+                })();
+                const tr = document.createElement('tr');
+                tr.className = 'border-b border-gray-800 hover:bg-gray-800/30';
+                const status = (o.payment_status || '').toLowerCase();
+                const badgeClass = status === 'paid' ? 'status-active' : (status === 'pending' ? 'status-pending' : 'status-inactive');
+                tr.innerHTML = `
+                    <td class="p-4 mono">${o.order_id}</td>
+                    <td class="p-4">${o.email || ''}</td>
+                    <td class="p-4">${pkg}</td>
+                    <td class="p-4">$${Number(o.total_amount || 0)}</td>
+                    <td class="p-4"><span class="status-badge ${badgeClass}">${o.payment_status}</span></td>
+                    <td class="p-4">${new Date(o.created_at).toLocaleString()}</td>
+                    <td class="p-4">
+                        <div class="flex space-x-2">
+                            <button class="action-btn btn-secondary" data-act="view" data-id="${o.order_id}">View</button>
+                            <button class="action-btn btn-primary" data-act="edit" data-id="${o.order_id}">Edit</button>
+                            <button class="action-btn btn-danger" data-act="delete" data-id="${o.order_id}">Delete</button>
+                        </div>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+            ordersState.total = data?.meta?.total || 0;
+            if (pageInfo) pageInfo.textContent = `Page ${data?.meta?.page || 1} of ${data?.meta?.pages || 1} — ${ordersState.total} total`;
+        }
+
+        async function deleteOrder(id) {
+            if (!confirm('Delete this order?')) return;
+            const res = await fetch(`${getApiUrl()}/admin/orders/${encodeURIComponent(id)}`, { method: 'DELETE', credentials: 'include', headers: { 'content-type': 'application/json', ...getAuthHeaders() } });
+            if (res.ok) loadOrders();
+        }
+
+        async function getOrder(id) {
+            const res = await fetch(`${getApiUrl()}/admin/orders/${encodeURIComponent(id)}`, { credentials: 'include', headers: { 'content-type': 'application/json', ...getAuthHeaders() } });
+            if (!res.ok) return null; return (await res.json())?.order || null;
+        }
+
+        async function createOrUpdateOrder(payload, id) {
+            const url = id ? `${getApiUrl()}/admin/orders/${encodeURIComponent(id)}` : `${getApiUrl()}/admin/orders`;
+            const method = id ? 'PATCH' : 'POST';
+            const res = await fetch(url, { method, credentials: 'include', headers: { 'content-type': 'application/json', ...getAuthHeaders() }, body: JSON.stringify(payload) });
+            if (!res.ok) return null; return await res.json();
+        }
+
+        function openOrderModal(order, editable) {
+            const modal = document.getElementById('order-modal');
+            const form = document.getElementById('order-form');
+            if (!modal || !form) return;
+            modal.style.display = 'block';
+            form.reset();
+            document.getElementById('om-order-id').value = order?.order_id || '';
+            document.getElementById('om-email').value = order?.email || '';
+            document.getElementById('om-total').value = Number(order?.total_amount || 0);
+            document.getElementById('om-status').value = order?.payment_status || 'paid';
+            // hydrate items UI
+            const items = Array.isArray(order?.items) ? order.items : [];
+            renderItemsList(items);
+            document.getElementById('om-items').style.display = 'none';
+            document.getElementById('om-items').value = JSON.stringify(items, null, 2);
+            form.setAttribute('data-editing', editable ? '1' : '0');
+        }
+
+        function renderItemsList(items) {
+            const list = document.getElementById('om-items-list');
+            if (!list) return;
+            
+            if (!items || items.length === 0) {
+                list.innerHTML = '<div class="text-center py-6 text-gray-400 text-sm border border-dashed border-white/10 rounded-lg"><i class="fas fa-box-open mb-2 text-2xl block"></i>No items added yet</div>';
+                return;
+            }
+            
+            list.innerHTML = '';
+            items.forEach((it, idx) => {
+                const row = document.createElement('div');
+                row.className = 'glass-card p-3 rounded-lg border border-white/10 hover:border-white/20 transition-all';
+                
+                const typeIcon = it.type === 'credits' ? '⭐' : '📦';
+                const typeBadge = it.type === 'credits' 
+                    ? '<span class="px-2 py-1 bg-purple-500/20 text-purple-300 rounded text-xs font-semibold">CREDITS</span>'
+                    : '<span class="px-2 py-1 bg-blue-500/20 text-blue-300 rounded text-xs font-semibold">PACKAGE</span>';
+                
+                const itemName = it.name || it.id || 'Unnamed Item';
+                const itemId = it.id ? `<span class="text-gray-500 text-xs">ID: ${it.id}</span>` : '';
+                const price = `${it.currency || '$'}${Number(it.price || 0).toFixed(2)}`;
+                const quantity = Number(it.quantity || 1);
+                const total = `${it.currency || '$'}${(Number(it.price || 0) * quantity).toFixed(2)}`;
+                
+                let creditInfo = '';
+                if (it.type === 'credits') {
+                    if (it.unlimited) {
+                        creditInfo = '<div class="text-sm text-yellow-400"><i class="fas fa-infinity mr-1"></i>Unlimited Credits</div>';
+                    } else {
+                        creditInfo = `<div class="text-sm text-gray-300"><i class="fas fa-coins mr-1"></i>${Number(it.credits || 0)} Credits</div>`;
+                    }
+                }
+                
+                row.innerHTML = `
+                    <div class="flex items-start justify-between gap-3">
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2 mb-2">
+                                <span class="text-2xl">${typeIcon}</span>
+                                <div class="flex-1">
+                                    <div class="flex items-center gap-2">
+                                        <h4 class="font-semibold text-white">${itemName}</h4>
+                                        ${typeBadge}
+                                    </div>
+                                    ${itemId}
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm">
+                                <div class="flex items-center gap-1 text-gray-400">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <span>Price: <strong class="text-white">${price}</strong></span>
+                                </div>
+                                <div class="flex items-center gap-1 text-gray-400">
+                                    <i class="fas fa-times"></i>
+                                    <span>Qty: <strong class="text-white">${quantity}</strong></span>
+                                </div>
+                                <div class="flex items-center gap-1 text-gray-400">
+                                    <i class="fas fa-calculator"></i>
+                                    <span>Total: <strong class="text-green-400">${total}</strong></span>
+                                </div>
+                                ${creditInfo}
+                            </div>
+                        </div>
+                        <button type="button" data-act="remove" data-idx="${idx}" class="action-btn btn-danger text-xs px-3 py-1.5 hover:scale-105 transition-transform">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                `;
+                list.appendChild(row);
+            });
+            
+            // attach remove handlers
+            list.querySelectorAll('button[data-act="remove"]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const idx = Number(btn.getAttribute('data-idx'));
+                    const current = getItemsFromList();
+                    current.splice(idx, 1);
+                    renderItemsList(current);
+                    document.getElementById('om-items').value = JSON.stringify(current, null, 2);
+                });
+            });
+            
+            // Add summary at the end
+            const totalItems = items.length;
+            const totalCost = items.reduce((sum, it) => sum + (Number(it.price || 0) * Number(it.quantity || 1)), 0);
+            const summary = document.createElement('div');
+            summary.className = 'border-t border-white/10 pt-3 mt-3 flex justify-between items-center text-sm';
+            summary.innerHTML = `
+                <div class="text-gray-400">
+                    <i class="fas fa-box mr-1"></i> Total Items: <strong class="text-white">${totalItems}</strong>
+                </div>
+                <div class="text-gray-400">
+                    <i class="fas fa-receipt mr-1"></i> Total Cost: <strong class="text-green-400 text-lg">$${totalCost.toFixed(2)}</strong>
+                </div>
+            `;
+            list.appendChild(summary);
+        }
+
+        function getItemsFromList() {
+            try {
+                const raw = document.getElementById('om-items').value;
+                const parsed = raw ? JSON.parse(raw) : [];
+                return Array.isArray(parsed) ? parsed : [];
+            } catch (e) {
+                return [];
+            }
+        }
+
+        function clearItemForm() {
+            document.getElementById('om-item-id').value = '';
+            document.getElementById('om-item-name').value = '';
+            document.getElementById('om-item-quantity').value = '1';
+            document.getElementById('om-item-price').value = '';
+            document.getElementById('om-item-credits').value = '';
+            document.getElementById('om-item-unlimited').checked = false;
+            document.getElementById('om-item-currency').value = '$';
+            document.getElementById('om-item-type').value = 'package';
+            toggleCreditsSection();
+        }
+        
+        function toggleCreditsSection() {
+            const type = document.getElementById('om-item-type').value;
+            const creditsSection = document.getElementById('om-item-credits-section');
+            if (creditsSection) {
+                creditsSection.style.display = type === 'credits' ? 'grid' : 'none';
+            }
+        }
+        
+        function validateItemForm() {
+            const id = document.getElementById('om-item-id').value.trim();
+            const name = document.getElementById('om-item-name').value.trim();
+            const price = document.getElementById('om-item-price').value;
+            
+            if (!id) {
+                alert('❌ Item ID is required');
+                document.getElementById('om-item-id').focus();
+                return false;
+            }
+            if (!name) {
+                alert('❌ Display Name is required');
+                document.getElementById('om-item-name').focus();
+                return false;
+            }
+            if (!price || Number(price) < 0) {
+                alert('❌ Valid price is required');
+                document.getElementById('om-item-price').focus();
+                return false;
+            }
+            return true;
+        }
+        
+        function bindItemsComposer() {
+            const addBtn = document.getElementById('om-item-add');
+            const clearBtn = document.getElementById('om-item-clear');
+            const advBtn = document.getElementById('om-items-advanced-toggle');
+            const advArea = document.getElementById('om-items');
+            const typeSelect = document.getElementById('om-item-type');
+            const unlimitedCheck = document.getElementById('om-item-unlimited');
+            
+            // Toggle credits section based on type
+            if (typeSelect) {
+                typeSelect.addEventListener('change', toggleCreditsSection);
+            }
+            
+            // Disable credits input when unlimited is checked
+            if (unlimitedCheck) {
+                unlimitedCheck.addEventListener('change', (e) => {
+                    const creditsInput = document.getElementById('om-item-credits');
+                    if (creditsInput) {
+                        creditsInput.disabled = e.target.checked;
+                        if (e.target.checked) creditsInput.value = '';
+                    }
+                });
+            }
+            
+            // Clear form
+            if (clearBtn) {
+                clearBtn.addEventListener('click', clearItemForm);
+            }
+            
+            // Add item
+            if (addBtn) {
+                addBtn.addEventListener('click', () => {
+                    if (!validateItemForm()) return;
+                    
+                    const type = document.getElementById('om-item-type').value || 'package';
+                    const id = document.getElementById('om-item-id').value.trim();
+                    const name = document.getElementById('om-item-name').value.trim();
+                    const quantity = Math.max(1, Number(document.getElementById('om-item-quantity').value || 1));
+                    const price = Number(document.getElementById('om-item-price').value || 0);
+                    const currency = document.getElementById('om-item-currency').value || '$';
+                    const credits = Number(document.getElementById('om-item-credits').value || 0);
+                    const unlimited = !!document.getElementById('om-item-unlimited').checked;
+                    
+                    const current = getItemsFromList();
+                    const base = { id, name, type, currency, quantity, price };
+                    
+                    if (type === 'package') {
+                        current.push(base);
+                    } else {
+                        if (unlimited) {
+                            current.push({ ...base, unlimited: true });
+                        } else {
+                            current.push({ ...base, credits });
+                        }
+                    }
+                    
+                    advArea.value = JSON.stringify(current, null, 2);
+                    renderItemsList(current);
+                    clearItemForm();
+                });
+            }
+            
+            // Toggle advanced editor
+            if (advBtn) {
+                advBtn.addEventListener('click', () => {
+                    const isHidden = advArea.style.display === 'none' || advArea.style.display === '';
+                    advArea.style.display = isHidden ? 'block' : 'none';
+                    advBtn.textContent = isHidden ? 'Hide Advanced JSON Editor' : 'Show Advanced JSON Editor';
+                    
+                    // Sync JSON with items list when opening
+                    if (isHidden) {
+                        const current = getItemsFromList();
+                        advArea.value = JSON.stringify(current, null, 2);
+                    }
+                });
+            }
+        }
+
+        function closeOrderModal() {
+            const modal = document.getElementById('order-modal');
+            if (modal) modal.style.display = 'none';
+        }
+
+        function bindOrdersEvents() {
+            const table = document.getElementById('orders-table');
+            if (table) table.addEventListener('click', async (e) => {
+                const btn = e.target.closest('button');
+                if (!btn) return;
+                const id = btn.getAttribute('data-id');
+                const act = btn.getAttribute('data-act');
+                if (act === 'delete') {
+                    await deleteOrder(id);
+                } else if (act === 'view' || act === 'edit') {
+                    const ord = await getOrder(id);
+                    if (!ord) return alert('Order not found');
+                    openOrderModal(ord, act === 'edit');
+                }
+            });
+            const prev = document.getElementById('orders-prev');
+            const next = document.getElementById('orders-next');
+            if (prev) prev.addEventListener('click', () => { if (ordersState.page > 1) { ordersState.page--; loadOrders(); } });
+            if (next) next.addEventListener('click', () => { const pages = Math.max(1, Math.ceil(ordersState.total / ordersState.pageSize)); if (ordersState.page < pages) { ordersState.page++; loadOrders(); } });
+            const s = document.getElementById('orders-search'); if (s) s.addEventListener('input', (e) => { ordersState.q = e.target.value.trim(); ordersState.page = 1; loadOrders(); });
+            const st = document.getElementById('orders-status'); if (st) st.addEventListener('change', (e) => { ordersState.status = e.target.value; ordersState.page = 1; loadOrders(); });
+            const pkg = document.getElementById('orders-package'); if (pkg) pkg.addEventListener('change', (e) => { ordersState.pkg = e.target.value; ordersState.page = 1; loadOrders(); });
+            const d = document.getElementById('orders-date'); if (d) d.addEventListener('change', (e) => { ordersState.date = e.target.value; ordersState.page = 1; loadOrders(); });
+            const newBtn = document.getElementById('order-new'); if (newBtn) newBtn.addEventListener('click', () => openOrderModal({}, false));
+        }
+
+        function bindOrderModal() {
+            const cancelBtn = document.getElementById('order-cancel'); if (cancelBtn) cancelBtn.addEventListener('click', closeOrderModal);
+            const saveBtn = document.getElementById('order-save'); if (saveBtn) saveBtn.addEventListener('click', async () => {
+                const form = document.getElementById('order-form');
+                const editing = form.getAttribute('data-editing') === '1';
+                const orderId = document.getElementById('om-order-id').value.trim();
+                const advArea = document.getElementById('om-items');
+                const advancedVisible = advArea && advArea.style.display !== 'none';
+                let items = [];
+                if (advancedVisible) {
+                    try { items = JSON.parse(advArea.value || '[]') } catch (e) { alert('Items JSON must be valid'); return; }
+                } else {
+                    items = getItemsFromList();
+                }
+                const payload = {
+                    email: document.getElementById('om-email').value.trim().toLowerCase(),
+                    total_amount: Number(document.getElementById('om-total').value || 0),
+                    payment_status: document.getElementById('om-status').value,
+                    items,
+                };
+                const resp = await createOrUpdateOrder(payload, editing ? orderId : null);
+                if (!resp) return alert('Failed to save order');
+                closeOrderModal();
+                loadOrders();
+            });
+        }
+
+        // Hook orders into page init
+        document.addEventListener('DOMContentLoaded', function() {
+            bindOrdersEvents();
+            bindOrderModal();
+            bindItemsComposer();
+            loadOrders();
+            loadUsers();
+            bindUsersEvents();
+            bindUserModal();
+        });
+
+        // Users Management
+        let allUsers = [];
+        let filteredUsers = [];
+        
+        async function loadUsers() {
+            try {
+                const res = await fetch(`${getApiUrl()}/admin/users`, { 
+                    credentials: 'include', 
+                    headers: { 'content-type': 'application/json', ...getAuthHeaders() } 
+                });
+                if (!res.ok) {
+                    throw new Error('Failed to fetch users');
+                }
+                const data = await res.json();
+                allUsers = data.users || [];
+                filteredUsers = [...allUsers];
+                renderUsers();
+                updateUserStats();
+            } catch (e) {
+                console.error('Error loading users:', e);
+                const tbody = document.getElementById('users-tbody');
+                if (tbody) {
+                    tbody.innerHTML = '<tr><td colspan="6" class="p-4 text-center text-red-400"><i class="fas fa-exclamation-triangle mr-2"></i>Failed to load users</td></tr>';
+                }
+            }
+        }
+        
+        function updateUserStats() {
+            const total = allUsers.length;
+            const starter = allUsers.filter(u => (u.subscription_tier || '').toLowerCase() === 'starter').length;
+            const pro = allUsers.filter(u => (u.subscription_tier || '').toLowerCase() === 'pro').length;
+            const expert = allUsers.filter(u => (u.subscription_tier || '').toLowerCase() === 'expert').length;
+            
+            document.getElementById('users-stat-total').textContent = total;
+            document.getElementById('users-stat-starter').textContent = starter;
+            document.getElementById('users-stat-pro').textContent = pro;
+            document.getElementById('users-stat-expert').textContent = expert;
+        }
+        
+        function getInitials(name) {
+            if (!name) return 'U';
+            const parts = name.trim().split(' ');
+            if (parts.length >= 2) {
+                return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+            }
+            return name.substring(0, 2).toUpperCase();
+        }
+        
+        function getBadgeColor(role) {
+            if (role === 'admin') return 'bg-red-500/20 text-red-400 border-red-500/30';
+            return 'bg-blue-500/20 text-blue-400 border-blue-500/30';
+        }
+        
+        function renderUsers() {
+            const tbody = document.getElementById('users-tbody');
+            if (!tbody) return;
+            
+            if (filteredUsers.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="6" class="p-4 text-center text-gray-400">No users found</td></tr>';
+                return;
+            }
+            
+            tbody.innerHTML = '';
+            filteredUsers.forEach(user => {
+                const tr = document.createElement('tr');
+                tr.className = 'border-b border-gray-800 hover:bg-gray-800/30';
+                tr.setAttribute('data-user-id', user.id);
+                
+                const initials = getInitials(user.full_name);
+                const roleBadge = getBadgeColor(user.role);
+                const tier = user.subscription_tier || 'none';
+                const credits = user.credits_unlimited ? 'Unlimited' : (user.credits_balance || 0);
+                const createdDate = user.created_at ? new Date(user.created_at).toLocaleDateString() : 'N/A';
+                
+                tr.innerHTML = `
+                    <td class="p-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
+                                <span class="text-sm font-bold">${initials}</span>
+                            </div>
+                            <span>${user.full_name || 'N/A'}</span>
+                        </div>
+                    </td>
+                    <td class="p-4">${user.email || 'N/A'}</td>
+                    <td class="p-4">
+                        <span class="status-badge ${roleBadge}">${user.role || 'user'}</span>
+                    </td>
+                    <td class="p-4">
+                        <select class="search-input p-2 rounded-lg tier-select" data-user-id="${user.id}" data-current-tier="${tier}">
+                            <option value="none" ${tier === 'none' ? 'selected' : ''}>None</option>
+                            <option value="starter" ${tier === 'starter' ? 'selected' : ''}>Starter</option>
+                            <option value="pro" ${tier === 'pro' ? 'selected' : ''}>Pro</option>
+                            <option value="expert" ${tier === 'expert' ? 'selected' : ''}>Expert</option>
+                        </select>
+                    </td>
+                    <td class="p-4">
+                        <span class="text-sm ${user.credits_unlimited ? 'text-yellow-400' : 'text-gray-300'}">
+                            ${credits}
+                        </span>
+                    </td>
+                    <td class="p-4 text-sm text-gray-400">${createdDate}</td>
+                `;
+                
+                tbody.appendChild(tr);
+            });
+        }
+        
+        async function updateUserTier(userId, newTier) {
+            try {
+                const res = await fetch(`${getApiUrl()}/admin/users/${userId}`, {
+                    method: 'PATCH',
+                    credentials: 'include',
+                    headers: { 'content-type': 'application/json', ...getAuthHeaders() },
+                    body: JSON.stringify({ plan: newTier })
+                });
+                
+                if (!res.ok) {
+                    throw new Error('Failed to update user tier');
+                }
+                
+                const data = await res.json();
+                
+                // Update local data
+                const userIndex = allUsers.findIndex(u => u.id === userId);
+                if (userIndex !== -1) {
+                    allUsers[userIndex] = { ...allUsers[userIndex], subscription_tier: newTier };
+                }
+                
+                const filteredIndex = filteredUsers.findIndex(u => u.id === userId);
+                if (filteredIndex !== -1) {
+                    filteredUsers[filteredIndex] = { ...filteredUsers[filteredIndex], subscription_tier: newTier };
+                }
+                
+                updateUserStats();
+                
+                // Show success feedback
+                const select = document.querySelector(`.tier-select[data-user-id="${userId}"]`);
+                if (select) {
+                    const originalBg = select.style.backgroundColor;
+                    select.style.backgroundColor = 'rgba(34, 197, 94, 0.3)';
+                    setTimeout(() => {
+                        select.style.backgroundColor = originalBg;
+                    }, 500);
+                }
+                
+                return true;
+            } catch (e) {
+                console.error('Error updating user tier:', e);
+                alert('Failed to update user tier: ' + e.message);
+                return false;
+            }
+        }
+        
+        function openUserModal() {
+            const modal = document.getElementById('user-modal');
+            const form = document.getElementById('user-form');
+            if (!modal || !form) return;
+            
+            // Reset form
+            form.reset();
+            document.getElementById('um-credits').value = '0';
+            document.getElementById('um-role').value = 'user';
+            document.getElementById('um-tier').value = 'none';
+            
+            modal.style.display = 'block';
+        }
+        
+        function closeUserModal() {
+            const modal = document.getElementById('user-modal');
+            if (modal) modal.style.display = 'none';
+        }
+        
+        async function createUser(userData) {
+            try {
+                const res = await fetch(`${getApiUrl()}/admin/users`, {
+                    method: 'POST',
+                    credentials: 'include',
+                    headers: { 'content-type': 'application/json', ...getAuthHeaders() },
+                    body: JSON.stringify(userData)
+                });
+                
+                if (!res.ok) {
+                    const error = await res.json();
+                    throw new Error(error.error || 'Failed to create user');
+                }
+                
+                const data = await res.json();
+                return data;
+            } catch (e) {
+                console.error('Error creating user:', e);
+                throw e;
+            }
+        }
+        
+        function bindUsersEvents() {
+            const tbody = document.getElementById('users-tbody');
+            if (tbody) {
+                tbody.addEventListener('change', async (e) => {
+                    if (e.target.classList.contains('tier-select')) {
+                        const userId = parseInt(e.target.getAttribute('data-user-id'));
+                        const currentTier = e.target.getAttribute('data-current-tier');
+                        const newTier = e.target.value;
+                        
+                        if (currentTier === newTier) return;
+                        
+                        e.target.disabled = true;
+                        const success = await updateUserTier(userId, newTier);
+                        e.target.disabled = false;
+                        
+                        if (success) {
+                            e.target.setAttribute('data-current-tier', newTier);
+                        } else {
+                            // Revert selection on failure
+                            e.target.value = currentTier;
+                        }
+                    }
+                });
+            }
+            
+            const searchInput = document.getElementById('users-search');
+            if (searchInput) {
+                searchInput.addEventListener('input', (e) => {
+                    const query = e.target.value.toLowerCase().trim();
+                    if (!query) {
+                        filteredUsers = [...allUsers];
+                    } else {
+                        filteredUsers = allUsers.filter(u => {
+                            const name = (u.full_name || '').toLowerCase();
+                            const email = (u.email || '').toLowerCase();
+                            return name.includes(query) || email.includes(query);
+                        });
+                    }
+                    renderUsers();
+                });
+            }
+            
+            // Bind Add User button
+            const newUserBtn = document.getElementById('user-new');
+            if (newUserBtn) {
+                newUserBtn.addEventListener('click', openUserModal);
+            }
+            
+            // Bind unlimited checkbox to disable credits input
+            const unlimitedCheck = document.getElementById('um-unlimited');
+            const creditsInput = document.getElementById('um-credits');
+            if (unlimitedCheck && creditsInput) {
+                unlimitedCheck.addEventListener('change', (e) => {
+                    creditsInput.disabled = e.target.checked;
+                    if (e.target.checked) creditsInput.value = '0';
+                });
+            }
+        }
+        
+        function bindUserModal() {
+            const cancelBtn = document.getElementById('user-cancel');
+            if (cancelBtn) {
+                cancelBtn.addEventListener('click', closeUserModal);
+            }
+            
+            const form = document.getElementById('user-form');
+            const saveBtn = document.getElementById('user-save');
+            
+            if (form && saveBtn) {
+                const submitHandler = async (e) => {
+                    e.preventDefault();
+                    
+                    // Validate form
+                    if (!form.checkValidity()) {
+                        form.reportValidity();
+                        return;
+                    }
+                    
+                    // Get form values
+                    const fullName = document.getElementById('um-full-name').value.trim();
+                    const email = document.getElementById('um-email').value.trim().toLowerCase();
+                    const password = document.getElementById('um-password').value;
+                    const role = document.getElementById('um-role').value;
+                    const tier = document.getElementById('um-tier').value;
+                    const credits = parseInt(document.getElementById('um-credits').value || '0');
+                    const unlimited = document.getElementById('um-unlimited').checked;
+                    
+                    // Validate
+                    if (!fullName || !email || !password) {
+                        alert('Please fill in all required fields');
+                        return;
+                    }
+                    
+                    if (password.length < 6) {
+                        alert('Password must be at least 6 characters');
+                        return;
+                    }
+                    
+                    // Disable button while creating
+                    saveBtn.disabled = true;
+                    saveBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Creating...';
+                    
+                    try {
+                        const userData = {
+                            full_name: fullName,
+                            email: email,
+                            password: password,
+                            user_type: role,
+                            plan: tier,
+                            credits_balance: unlimited ? 0 : credits,
+                            credits_unlimited: unlimited
+                        };
+                        
+                        await createUser(userData);
+                        
+                        // Success!
+                        closeUserModal();
+                        
+                        // Show success message
+                        alert(`✅ User "${fullName}" created successfully!`);
+                        
+                        // Reload users
+                        await loadUsers();
+                        
+                    } catch (error) {
+                        alert('❌ Failed to create user: ' + error.message);
+                    } finally {
+                        saveBtn.disabled = false;
+                        saveBtn.innerHTML = '<i class="fas fa-user-plus mr-2"></i>Create User';
+                    }
+                };
+                
+                form.addEventListener('submit', submitHandler);
+                saveBtn.addEventListener('click', submitHandler);
+            }
+        }
+
+        async function initCharts() {
+            // Revenue Chart
+            const revenueCtx = document.getElementById('revenueChart').getContext('2d');
+            const ts = await fetchAdminTimeseries();
+            const revLabels = (ts?.revenue || []).map(r => r.day);
+            const revData = (ts?.revenue || []).map(r => Number(r.revenue || 0));
+            new Chart(revenueCtx, {
+                type: 'line',
+                data: {
+                    labels: revLabels.length ? revLabels : ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                    datasets: [{
+                        label: 'Revenue',
+                        data: revData.length ? revData : [12000, 19000, 15000, 25000, 22000, 30000],
+                        borderColor: '#00d4ff',
+                        backgroundColor: 'rgba(0, 212, 255, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            labels: {
+                                color: '#ffffff'
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            ticks: {
+                                color: '#ffffff'
+                            },
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            }
+                        },
+                        y: {
+                            ticks: {
+                                color: '#ffffff'
+                            },
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Activity Chart
+            const activityCtx = document.getElementById('activityChart').getContext('2d');
+            const userLabels = (ts?.users || []).map(r => r.day);
+            const userData = (ts?.users || []).map(r => Number(r.users || 0));
+            new Chart(activityCtx, {
+                type: 'bar',
+                data: {
+                    labels: userLabels.length ? userLabels : ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                    datasets: [{
+                        label: 'Active Users',
+                        data: userData.length ? userData : [420, 380, 450, 520, 490, 320, 280],
+                        backgroundColor: 'rgba(124, 58, 237, 0.8)',
+                        borderColor: '#7c3aed',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            labels: {
+                                color: '#ffffff'
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            ticks: {
+                                color: '#ffffff'
+                            },
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            }
+                        },
+                        y: {
+                            ticks: {
+                                color: '#ffffff'
+                            },
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Analytics Revenue Chart
+            const analyticsCtx = document.getElementById('analyticsRevenueChart').getContext('2d');
+            const revWLabels = (ts?.revenue || []).map(r => r.day);
+            const revWData = (ts?.revenue || []).map(r => Number(r.revenue || 0));
+            new Chart(analyticsCtx, {
+                type: 'line',
+                data: {
+                    labels: revWLabels.length ? revWLabels : ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+                    datasets: [{
+                        label: 'Revenue',
+                        data: revWData.length ? revWData : [8500, 12000, 15500, 18200],
+                        borderColor: '#00d4ff',
+                        backgroundColor: 'rgba(0, 212, 255, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            labels: {
+                                color: '#ffffff'
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            ticks: {
+                                color: '#ffffff'
+                            },
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            }
+                        },
+                        y: {
+                            ticks: {
+                                color: '#ffffff'
+                            },
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Package Distribution Chart
+            const packageCtx = document.getElementById('packageChart').getContext('2d');
+            new Chart(packageCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Essential', 'Professional', 'Expert'],
+                    datasets: [{
+                        data: [35, 45, 20],
+                        backgroundColor: [
+                            'rgba(0, 212, 255, 0.8)',
+                            'rgba(124, 58, 237, 0.8)',
+                            'rgba(34, 197, 94, 0.8)'
+                        ],
+                        borderColor: [
+                            '#00d4ff',
+                            '#7c3aed',
+                            '#22c55e'
+                        ],
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: '#ffffff',
+                                padding: 20
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Initialize charts when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            fetchAdminOverview();
+            initCharts();
+            // Activities feed with real data
+            fetchAdminActivities().then(a => {
+                const host = document.getElementById('recent-activity-list');
+                if (!host || !a || !Array.isArray(a.activities)) return;
+                host.innerHTML = '';
+                const iconByType = { user: 'fa-user-plus', order: 'fa-shopping-cart', analysis: 'fa-chart-line' };
+                const colorByType = { user: 'bg-green-500', order: 'bg-blue-500', analysis: 'bg-purple-500' };
+                a.activities.slice(0, 10).forEach(item => {
+                    const icon = iconByType[item.type] || 'fa-bolt';
+                    const color = colorByType[item.type] || 'bg-gray-500';
+                    const when = new Date(item.created_at).toLocaleString();
+                    let title = 'Activity';
+                    let subtitle = '';
+                    if (item.type === 'user') {
+                        title = 'New user registration';
+                        subtitle = item.data?.email || '';
+                    } else if (item.type === 'order') {
+                        title = 'New order placed';
+                        subtitle = `${item.data?.email || ''} - $${Number(item.data?.total_amount || 0)}`;
+                    } else if (item.type === 'analysis') {
+                        title = 'New analysis created';
+                        subtitle = item.data?.symbol || 'Analysis';
+                    }
+                    const div = document.createElement('div');
+                    div.className = 'flex items-center justify-between p-4 glass-card rounded-lg';
+                    div.innerHTML = `
+                        <div class="flex items-center space-x-4">
+                            <div class="w-10 h-10 ${color} rounded-full flex items-center justify-center">
+                                <i class="fas ${icon} text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium">${title}</p>
+                                <p class="text-sm text-gray-400">${subtitle}</p>
+                            </div>
+                        </div>
+                        <span class="text-sm text-gray-400">${when}</span>
+                    `;
+                    host.appendChild(div);
+                });
+            });
+        });
+    </script>
+
+
+    <script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDnxtu1y2%2BFWpiQymeS2bdrQg3oqdFn%2F2O7CP3ak9jEAqfy3ZPPhTtad8t4O8ng4uDmvjVrts5EjqmfJKvvkwCdmtH1T3ZU2A3JR9O6GXfbigJwD3Am%2B9xYH9tScm9cIFyE%2BjBNhjzxn8b4xPJKXmk%2BAkJILA2lyEM65%2FCPK%2FLII%2BQCdQU6AkfVT3YT7NTMZf%2BsHcLMiMoW8T9BlLpQl04m2V8tKtqby0%2Fw4Px%2FgMMJpGMNm31Gl%2Fk%2FcmuE8Y%2F84ymzguILqcNhP7h%2FiP1h1GNLgyFaVuQoVmXHpY80ff%2FFq2wYYNrflL4o1xFZ3AYuhWyN1Zy6myf3YCmseFQbQvy2Ovk55ldWMFDHD4EQCrXEoZ5I7iu71sp39KP%2Fid1C70H7iwhHnQkBb8oTRnhb0JmvtsNJdd9p3%2B6%2BLxkcp%2Bg3kxvOdFmLrOdts8%2FsdYrO5fbkoriLWjqq66JXg4rikxELHV989dLSLpyg1BIfq1CysyG8FcYtlv0%2FxLdR61DWneyU6MwXz%2FH1Fpqsiy88ZLwYU%3D";
+        window.__genspark_locale = "en-US";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDnxtu1y2+FWpiQymeS2bdrQg3oqdFn/2O7CP3ak9jEAqfy3ZPPhTtad8t4O8ng4uDmvjVrts5EjqmfJKvvkwCdmtH1T3ZU2A3JR9O6GXfbigJwD3Am+9xYH9tScm9cIFyE+jBNhjzxn8b4xPJKXmk+AkJILA2lyEM65/CPK/LII+QCdQU6AkfVT3YT7NTMZf+sHcLMiMoW8T9BlLpQl04m2V8tKtqby0/w4Px/gMMJpGMNm31Gl/k/cmuE8Y/84ymzguILqcNhP7h/iP1h1GNLgyFaVuQoVmXHpY80ff/Fq2wYYNrflL4o1xFZ3AYuhWyN1Zy6myf3YCmseFQbQvy2Ovk55ldWMFDHD4EQCrXEoZ5I7iu71sp39KP/id1C70H7iwhHnQkBb8oTRnhb0JmvtsNJdd9p3+6+Lxkcp+g3kxvOdFmLrOdts8/sdYrO5fbkoriLWjqq66JXg4rikxELHV989dLSLpyg1BIfq1CysyG8FcYtlv0/xLdR61DWneyU6MwXz/H1Fpqsiy88ZLwYU=";
+    </script>
+    
+    <script id="html_notice_dialog_script" src="./OpenSightAI - Advanced Admin Console_files/notice_dialog.js"></script>
+    <div class="genspark-notice-dialog" style="display: none;">
+      <div class="genspark-notice-content">
+        <h2 class="genspark-notice-title">This site was created by a user, please note:</h2>
+        <ul class="genspark-notice-list">
+          <li>Content may contain inaccuracies, double-check information before use.</li>
+          <li>If you notice any inappropriate content on this site, please contact us at <a href="mailto:support@genspark.ai">support@genspark.ai</a>.</li>
+        </ul>
+        <div class="genspark-notice-checkbox">
+          <input type="checkbox" id="genspark-dont-show">
+          <label for="genspark-dont-show">Don't show this message again.</label>
+        </div>
+        <div class="genspark-notice-actions">
+          <button class="genspark-notice-ok">OK</button>
+        </div>
+      </div>
+    </div>
+
+<!-- Order Modal -->
+<div id="order-modal" class="fixed inset-0 z-50 hidden" style="display:none;">
+  <div class="absolute inset-0 bg-black/50"></div>
+  <div class="absolute inset-0 flex items-center justify-center p-4">
+    <div class="glass-card w-full max-w-xl p-6 rounded-xl">
+      <h3 class="text-xl font-semibold mb-4">Order</h3>
+      <form id="order-form" data-editing="0" onsubmit="return false;">
+        <div class="grid grid-cols-1 gap-4">
+          <div>
+            <label class="text-sm text-gray-300">Order ID (for editing)</label>
+            <input id="om-order-id" class="search-input p-3 rounded-lg w-full" placeholder="order_xxx (auto for new)" />
+          </div>
+          <div>
+            <label class="text-sm text-gray-300">Customer Email</label>
+            <input id="om-email" class="search-input p-3 rounded-lg w-full" placeholder="customer@example.com" />
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="text-sm text-gray-300">Total Amount</label>
+              <input id="om-total" type="number" step="0.01" class="search-input p-3 rounded-lg w-full" />
+            </div>
+            <div>
+              <label class="text-sm text-gray-300">Status</label>
+              <select id="om-status" class="search-input p-3 rounded-lg w-full">
+                <option value="paid">Paid</option>
+                <option value="pending">Pending</option>
+                <option value="cancelled">Cancelled</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label class="text-sm font-semibold text-gray-200 mb-2 block">Order Items</label>
+            <div class="glass-card p-4 rounded-lg">
+              <!-- Items List -->
+              <div id="om-items-list" class="space-y-3 mb-4"></div>
+              
+              <!-- Add Item Form -->
+              <div class="border-t border-white/10 pt-4">
+                <div class="grid grid-cols-1 gap-3">
+                  <div class="grid grid-cols-2 gap-3">
+                    <div>
+                      <label class="text-xs text-gray-400 mb-1 block">Item Type</label>
+                      <select id="om-item-type" class="search-input p-2.5 rounded-lg w-full text-sm">
+                        <option value="package">📦 Package</option>
+                        <option value="credits">⭐ Credits</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label class="text-xs text-gray-400 mb-1 block">Item ID <span class="text-red-400">*</span></label>
+                      <input id="om-item-id" class="search-input p-2.5 rounded-lg w-full text-sm" placeholder="e.g. professional" />
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <label class="text-xs text-gray-400 mb-1 block">Display Name <span class="text-red-400">*</span></label>
+                    <input id="om-item-name" class="search-input p-2.5 rounded-lg w-full text-sm" placeholder="e.g. Professional Package" />
+                  </div>
+                  
+                  <div class="grid grid-cols-3 gap-3">
+                    <div>
+                      <label class="text-xs text-gray-400 mb-1 block">Price ($) <span class="text-red-400">*</span></label>
+                      <input id="om-item-price" type="number" step="0.01" min="0" class="search-input p-2.5 rounded-lg w-full text-sm" placeholder="0.00" />
+                    </div>
+                    <div>
+                      <label class="text-xs text-gray-400 mb-1 block">Quantity</label>
+                      <input id="om-item-quantity" type="number" min="1" value="1" class="search-input p-2.5 rounded-lg w-full text-sm" />
+                    </div>
+                    <div>
+                      <label class="text-xs text-gray-400 mb-1 block">Currency</label>
+                      <select id="om-item-currency" class="search-input p-2.5 rounded-lg w-full text-sm">
+                        <option value="$">$ USD</option>
+                        <option value="€">€ EUR</option>
+                        <option value="£">£ GBP</option>
+                      </select>
+                    </div>
+                  </div>
+                  
+                  <div id="om-item-credits-section" class="grid grid-cols-2 gap-3" style="display:none;">
+                    <div>
+                      <label class="text-xs text-gray-400 mb-1 block">Credits Amount</label>
+                      <input id="om-item-credits" type="number" min="0" class="search-input p-2.5 rounded-lg w-full text-sm" placeholder="0" />
+                    </div>
+                    <div class="flex items-end">
+                      <label class="flex items-center gap-2 text-sm text-gray-300 cursor-pointer p-2.5">
+                        <input id="om-item-unlimited" type="checkbox" class="w-4 h-4" />
+                        <span>Unlimited Credits</span>
+                      </label>
+                    </div>
+                  </div>
+                  
+                  <div class="flex justify-end gap-2 mt-2">
+                    <button type="button" id="om-item-clear" class="action-btn btn-secondary text-sm">Clear</button>
+                    <button type="button" id="om-item-add" class="action-btn btn-primary text-sm">
+                      <i class="fas fa-plus mr-1"></i> Add Item
+                    </button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="border-t border-white/10 mt-4 pt-3 flex justify-between items-center">
+                <div class="text-xs text-gray-400">
+                  <i class="fas fa-info-circle mr-1"></i> Items are stored in the order
+                </div>
+                <button type="button" id="om-items-advanced-toggle" class="text-xs text-blue-400 hover:text-blue-300 underline">
+                  Show Advanced JSON Editor
+                </button>
+              </div>
+              
+              <textarea id="om-items" rows="8" class="search-input p-3 rounded-lg w-full mt-3 font-mono text-xs" style="display:none;" placeholder='[{"type":"package","id":"professional","name":"Professional","price":129,"currency":"$","quantity":1}]'></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-end gap-2 mt-4">
+          <button type="button" class="action-btn btn-secondary" id="order-cancel">Cancel</button>
+          <button type="button" class="action-btn btn-primary" id="order-save">Save</button>
+        </div>
+      </form>
+        </div>
+      </div>
+    </div>
+
+<!-- User Modal -->
+<div id="user-modal" class="fixed inset-0 z-50 hidden" style="display:none;">
+  <div class="absolute inset-0 bg-black/50"></div>
+  <div class="absolute inset-0 flex items-center justify-center p-4">
+    <div class="glass-card w-full max-w-lg p-6 rounded-xl">
+      <h3 class="text-xl font-semibold mb-4">Add New User</h3>
+      <form id="user-form" onsubmit="return false;">
+        <div class="grid grid-cols-1 gap-4">
+          <div>
+            <label class="text-sm text-gray-300 block mb-2">Full Name <span class="text-red-400">*</span></label>
+            <input id="um-full-name" class="search-input p-3 rounded-lg w-full" placeholder="John Doe" required />
+          </div>
+          <div>
+            <label class="text-sm text-gray-300 block mb-2">Email <span class="text-red-400">*</span></label>
+            <input id="um-email" type="email" class="search-input p-3 rounded-lg w-full" placeholder="user@example.com" required />
+          </div>
+          <div>
+            <label class="text-sm text-gray-300 block mb-2">Password <span class="text-red-400">*</span></label>
+            <input id="um-password" type="password" class="search-input p-3 rounded-lg w-full" placeholder="Min 6 characters" required minlength="6" />
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="text-sm text-gray-300 block mb-2">Role</label>
+              <select id="um-role" class="search-input p-3 rounded-lg w-full">
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+              </select>
+            </div>
+            <div>
+              <label class="text-sm text-gray-300 block mb-2">Subscription Tier</label>
+              <select id="um-tier" class="search-input p-3 rounded-lg w-full">
+                <option value="none">None</option>
+                <option value="starter">Starter</option>
+                <option value="pro">Pro</option>
+                <option value="expert">Expert</option>
+              </select>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="text-sm text-gray-300 block mb-2">Initial Credits</label>
+              <input id="um-credits" type="number" min="0" value="0" class="search-input p-3 rounded-lg w-full" />
+            </div>
+            <div class="flex items-end">
+              <label class="flex items-center gap-2 text-sm text-gray-300 cursor-pointer p-3">
+                <input id="um-unlimited" type="checkbox" class="w-4 h-4" />
+                <span>Unlimited Credits</span>
+              </label>
+            </div>
+          </div>
+          <div class="bg-blue-500/10 border border-blue-500/30 rounded-lg p-3 text-sm text-blue-300">
+            <i class="fas fa-info-circle mr-2"></i>
+            User will receive a welcome email with their credentials.
+          </div>
+        </div>
+        <div class="flex justify-end gap-2 mt-6">
+          <button type="button" class="action-btn btn-secondary" id="user-cancel">Cancel</button>
+          <button type="submit" class="action-btn btn-primary" id="user-save">
+            <i class="fas fa-user-plus mr-2"></i>Create User
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+</body></html>

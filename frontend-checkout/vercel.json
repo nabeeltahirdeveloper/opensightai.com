@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "rewrites": [
+    { 
+      "source": "/api/checkout/:path*", 
+      "destination": "https://api-dev.OpenSightai.com/api/checkout/:path*" 
+    },
+    { 
+      "source": "/api/payment/:path*", 
+      "destination": "https://api-dev.OpenSightai.com/api/payment/:path*" 
+    },
+    { 
+      "source": "/api/currencies/:path*", 
+      "destination": "https://api-dev.OpenSightai.com/api/currencies/:path*" 
+    },
+    { 
+      "source": "/api/check-vpn", 
+      "destination": "https://api-dev.OpenSightai.com/api/check-vpn" 
+    },
+    { 
+      "source": "/api/direct-purchase/:path*", 
+      "destination": "https://api-dev.OpenSightai.com/api/direct-purchase/:path*" 
+    },
+    { 
+      "source": "/(.*)", 
+      "destination": "/index.html" 
+    }
+  ]
+}
+

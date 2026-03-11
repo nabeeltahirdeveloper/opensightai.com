@@ -1,0 +1,488 @@
+{
+  "common": {
+    "loading": "Yükleniyor...",
+    "dashboard": "Kontrol Paneli",
+    "login": "Giriş Yap",
+    "home": "Ana Sayfa",
+    "features": "Özellikler",
+    "pricing": "Fiyatlandırma",
+    "about": "Hakkımızda",
+    "contact": "İletişim",
+    "OpenSightAI": "ScopeZeka",
+    "startFreeTrial": "Ücretsiz Deneme Başlat",
+    "addToCart": "Sepete Ekle",
+    "checking": "Kontrol ediliyor...",
+    "sendMessage": "Mesaj Gönder",
+    "subscribe": "Abone Ol",
+    "enterYourEmail": "E-posta adresinizi girin",
+    "contactSales": "Satış Ekibiyle İletişime Geç",
+    "needCustomSolution": "Özel bir çözüme mi ihtiyacınız var? Size yardımcı olabiliriz.",
+    "loadingPackages": "Paketler yükleniyor...",
+    "oneTimePayment": "Tek seferlik ödeme",
+    "mostPopular": "En Popüler",
+    "logout": "Çıkış Yap"
+  },
+  "landing": {
+    "hero": {
+      "title": "Gelişmiş Piyasa",
+      "titleHighlight": "İstihbarat",
+      "titleSuffix": "Platformu",
+      "subtitle": "AI'ın gücünü kullanarak piyasa kalıplarını analiz edin, piyasa analiz becerilerinizi geliştirin ve devrim niteliğindeki platformumuzla gelişmiş piyasa stratejileri öğrenin.",
+      "startFreeTrial": "Ücretsiz Deneme Başlat",
+      "analysesCompleted": "Tamamlanan Analizler",
+      "activeUsers": "Aktif Kullanıcılar",
+      "accuracyRate": "Doğruluk Oranı (%)",
+      "countriesServed": "Hizmet Verilen Ülkeler"
+    },
+    "features": {
+      "title": "Güçlü",
+      "titleHighlight": "AI Özellikleri",
+      "subtitle": "Gelişmiş AI destekli araçlarımızla yeni nesil piyasa analizini deneyimleyin",
+      "chartAnalysis": "Grafik Analizi",
+      "aiTutor": "AI Öğretmen",
+      "marketAssessment": "Piyasa Değerlendirmesi",
+      "portfolio": "Portföy Araçları",
+      "liveChartAnalytics": {
+        "title": "Canlı Grafik Analiz Aracı",
+        "description": "Herhangi bir grafik ekran görüntüsü yükleyin ve kesin piyasa içgörüleri, destek/direnç seviyeleri ve analiz değerlendirme önerileri ile kapsamlı analiz alın.",
+        "indicators": "50+ Teknik Gösterge",
+        "indicatorsDesc": "RSI, MACD, Bollinger Bantları, Hareketli Ortalamalar ve daha fazlası",
+        "patternRecognition": "Desen Tanıma",
+        "patternRecognitionDesc": "Üçgenler, kanallar, bayraklar, baş-omuz ve karmaşık desenler",
+        "marketAssessmentTools": "Piyasa Değerlendirme Araçları",
+        "marketAssessmentToolsDesc": "Optimal analiz değerlendirme seviyelerinin otomatik hesaplanması",
+        "tryChartAnalyzer": "Grafik Analiz Aracını Dene"
+      },
+      "uploadChartScreenshot": "Grafik Ekran Görüntüsü Yükle",
+      "dragDropOrClick": "Sürükle & bırak veya grafik görselinizi seçmek için tıklayın",
+      "freeDemoAnalyses": "Ücretsiz Demo Analizler",
+      "analyzingChart": "Grafik Analiz Ediliyor...",
+      "analysisComplete": "Analiz Tamamlandı!",
+      "analysisCompleteDesc": "Grafiğiniz başarıyla analiz edildi.",
+      "aiTutorSection": {
+        "title": "AI Uzmanından Öğrenin",
+        "description": "Öğrenme tarzınıza ve ilerlemenize uyum sağlayan AI ajan öğretmenimizle kişiselleştirilmiş eğitim alın.",
+        "personalizedLearning": "Kişiselleştirilmiş Öğrenme Yolları",
+        "personalizedLearningDesc": "Deneyim seviyenize göre özelleştirilmiş müfredat",
+        "progressTracking": "İlerleme Takibi",
+        "progressTrackingDesc": "Sertifikalar ve rozetlerle öğrenme ilerlemenizi takip edin",
+        "communityLearning": "Topluluk Öğrenimi",
+        "communityLearningDesc": "Çalışma gruplarına katılın ve diğer profesyonellerle öğrenin",
+        "startLearning": "Öğrenmeye Başla",
+        "aiAgentTeacher": "AI Ajan Öğretmen",
+        "askAnything": "Piyasalar hakkında bana her şeyi sorabilirsiniz...",
+        "freeTutorMessages": "Ücretsiz Öğretmen Mesajları"
+      },
+      "marketAssessmentSection": {
+        "title": "Gelişmiş Piyasa Değerlendirmesi",
+        "description": "Kapsamlı piyasa değerlendirme araçlarımız ve hesaplayıcılarımızla analizinizi geliştirin.",
+        "positionSizing": "Pozisyon Boyutlandırma Hesaplayıcısı",
+        "positionSizingDesc": "Analiz toleransınıza göre optimal pozisyon boyutlarını hesaplayın",
+        "useCalculator": "Hesaplayıcıyı Kullan",
+        "marketConditionAnalysis": "Piyasa Durumu Analizi",
+        "marketConditionAnalysisDesc": "Herhangi bir pozisyona girmeden önce potansiyel piyasa koşullarını analiz edin",
+        "assessMarket": "Piyasayı Değerlendir",
+        "portfolioOptimization": "Portföy Optimizasyonu",
+        "portfolioOptimizationDesc": "Maksimum analiz ayarlı getiriler için portföyünüzü optimize edin",
+        "optimizePortfolio": "Portföyü Optimize Et"
+      },
+      "portfolioSection": {
+        "title": "Portföy Yönetim Araçları",
+        "description": "Profesyonel düzeyde araçlarımızla tüm portföyünüzü takip edin, analiz edin ve optimize edin.",
+        "totalPortfolioValue": "Toplam Portföy Değeri",
+        "monthlyReturn": "Aylık Getiri",
+        "sharpeRatio": "Sharpe Oranı",
+        "maxDrawdown": "Maksimum Düşüş"
+      }
+    },
+    "pricing": {
+      "title": "Planınızı Seçin",
+      "titleHighlight": "Plan",
+      "subtitle": "Piyasa analiz ihtiyaçlarınız için mükemmel tek seferlik satın alımı seçin",
+      "packages": {
+        "starter": {
+          "name": "Başlangıç",
+          "description": "Piyasa analizini keşfetmeye başlayanlar için mükemmel",
+          "features": {
+            "0": "Canlı grafik analizi (10 analiz)",
+            "1": "AI ajan öğretmen (temel erişim)",
+            "2": "Eğitim merkezi erişimi",
+            "3": "E-posta desteği (48 saat içinde yanıt)",
+            "4": "Standart analiz araçları ve özellikleri",
+            "5": "Temel piyasa araştırma içgörüleri",
+            "6": "Mobil uygulama erişimi",
+            "7": "Analiz geçmişi (30 gün)",
+            "8": "PDF'ye dışa aktarma"
+          }
+        },
+        "professional": {
+          "name": "Profesyonel",
+          "description": "Ciddi yatırımcılar için en popüler seçim",
+          "features": {
+            "0": "Canlı grafik analizi (50 analiz)",
+            "1": "AI ajan öğretmen (gelişmiş özellikler)",
+            "2": "Tam eğitim merkezi erişimi",
+            "3": "E-posta desteği (24 saat içinde yanıt)",
+            "4": "Gelişmiş analiz araçları ve özellikleri",
+            "5": "Kapsamlı piyasa araştırma içgörüleri",
+            "6": "Mobil uygulama erişimi",
+            "7": "Analiz geçmişi (6 ay)",
+            "8": "Excel/PDF'ye dışa aktarma",
+            "9": "Çoklu veri izleme listeleri",
+            "10": "Gelişmiş değerlendirme paketi",
+            "11": "Desen tanıma araçları",
+            "12": "Özel analiz şablonları"
+          }
+        },
+        "expert": {
+          "name": "Uzman",
+          "description": "Tüm premium özelliklere tam erişim",
+          "features": {
+            "0": "Canlı grafik analizi (sınırsız analiz)",
+            "1": "AI ajan öğretmen (premium özellikler)",
+            "2": "Premium içerikli tam eğitim merkezi",
+            "3": "Öncelikli e-posta desteği (anında yanıt)",
+            "4": "Profesyonel düzeyde analiz araçları",
+            "5": "Premium piyasa araştırma içgörüleri",
+            "6": "Mobil ve masaüstü uygulama erişimi",
+            "7": "Analiz geçmişi (sınırsız)",
+            "8": "Excel/PDF/CSV'ye dışa aktarma",
+            "9": "Çoklu veri izleme listeleri (sınırsız)",
+            "10": "Gelişmiş değerlendirme paketi",
+            "11": "Desen tanıma araçları",
+            "12": "Özel analiz şablonları",
+            "13": "Entegrasyonlar için API erişimi",
+            "14": "Beyaz etiket seçenekleri",
+            "15": "Öncelikli özellik talepleri",
+            "16": "Gelişmiş piyasa göstergeleri",
+            "17": "Gerçek zamanlı veri akışları",
+            "18": "Portföy takip araçları"
+          }
+        }
+      }
+    },
+    "howItWorks": {
+      "title": "Nasıl",
+      "titleHighlight": "Çalışır",
+      "subtitle": "ScopeZeka ile üç basit adımda başlayın",
+      "step1": {
+        "title": "Grafiğinizi Yükleyin",
+        "description": "Herhangi bir grafik ekran görüntüsünü veya görsel dosyasını AI analiz aracımıza sürükle ve bırak."
+      },
+      "step2": {
+        "title": "AI Analizi",
+        "description": "Gelişmiş AI'mız grafiğinizi işler ve desenler, trendler ve fırsatlar belirler."
+      },
+      "step3": {
+        "title": "Sonuçları Alın",
+        "description": "Piyasa içgörüleri ve eğitici analiz değerlendirme seviyeleri ile kapsamlı analiz alın."
+      }
+    },
+    "testimonials": {
+      "title": "Müşterilerimiz",
+      "titleHighlight": "Ne Diyor",
+      "subtitle": "Dünya çapında binlerce profesyonel tarafından güveniliyor",
+      "testimonial1": {
+        "role": "Portföy Yöneticisi",
+        "quote": "ScopeZeka analiz iş akışımı devrim niteliğinde değiştirdi. AI doğruluğu inanılmaz ve karar verme sürecimi önemli ölçüde iyileştirdi."
+      },
+      "testimonial2": {
+        "role": "Yatırım Analisti",
+        "quote": "AI ajan öğretmen özelliği harika! 3 ayda kendi kendime yıllarca çalışarak öğrendiğimden daha fazla şey öğrendim. Kişiselleştirilmiş yaklaşım gerçekten işe yarıyor."
+      },
+      "testimonial3": {
+        "role": "Fon Yöneticisi",
+        "quote": "Piyasa değerlendirme araçları birinci sınıf. ScopeZeka portföyümü optimize etmeme ve düşüşleri önemli ölçüde azaltmama yardımcı oldu."
+      },
+      "viewAllReviews": "Tüm Yorumları Görüntüle"
+    },
+    "about": {
+      "title": "Hakkında",
+      "titleHighlight": "ScopeZeka",
+      "description": "Gelişmiş piyasa analizini demokratikleştirmeye adanmış AI araştırmacıları, piyasa uzmanları ve teknoloji yenilikçilerinden oluşan bir ekibiz. Misyonumuz, dünya çapındaki bireysel yatırımcılara ve profesyonellere kurumsal düzeyde araçlar sağlamaktır.",
+      "mission": {
+        "title": "Misyonumuz",
+        "description": "Her yatırımcıyı AI destekli piyasa istihbaratı ile güçlendirmek"
+      },
+      "vision": {
+        "title": "Vizyonumuz",
+        "description": "AI destekli piyasa analizi için küresel standart olmak"
+      },
+      "values": {
+        "title": "Değerlerimiz",
+        "description": "Şeffaflık, yenilik ve her şeyden önce müşteri başarısı"
+      },
+      "learnMore": "Hakkımızda Daha Fazla Bilgi",
+      "technology": {
+        "title": "Teknolojimiz",
+        "aiAccuracy": "AI Doğruluğu",
+        "processingSpeed": "İşleme Hızı",
+        "userSatisfaction": "Kullanıcı Memnuniyeti",
+        "award": "2024 FinTech İnovasyon Ödülü Kazananı"
+      }
+    },
+    "faq": {
+      "title": "Sıkça Sorulan",
+      "titleHighlight": "Sorular",
+      "subtitle": "ScopeZeka hakkında yaygın soruların yanıtlarını bulun",
+      "questions": {
+        "accuracy": {
+          "question": "AI analizi ne kadar doğru?",
+          "answer": "AI sistemimiz tüm piyasa koşullarında %98,5 doğruluk oranını korur. Sistem sürekli olarak milyonlarca grafik deseni ve piyasa veri noktası üzerinde eğitilmektedir."
+        },
+        "purchase": {
+          "question": "Bu tek seferlik bir satın alma mı yoksa abonelik mi?",
+          "answer": "Tüm paketlerimiz yaşam boyu erişimle tek seferlik satın alımlardır. Tekrarlayan ücret veya abonelik ücreti yoktur."
+        },
+        "formats": {
+          "question": "Hangi grafik formatları destekleniyor?",
+          "answer": "PNG, JPG, JPEG, GIF ve WebP dahil olmak üzere tüm büyük görüntü formatlarını destekliyoruz. AI'mız herhangi bir platform veya broker'dan grafikleri analiz edebilir."
+        },
+        "refunds": {
+          "question": "İade sunuyor musunuz?",
+          "answer": "30 günlük para iade garantisi sunuyoruz. İlk 30 gün içinde tamamen memnun kalmazsanız, tam iade sağlayacağız."
+        },
+        "credits": {
+          "question": "ScopeZeka'da kredi sistemi nasıl çalışıyor?",
+          "answer": "ScopeZeka, kullanıcıların platformun AI araçlarına erişmesine ve kullanmasına olanak tanıyan kredi tabanlı bir sistem kullanır. Erişim planlarımızdan birini (örneğin 20 kredili plan) satın aldığınızda, bu krediler hesabınıza eklenir ve AI görevlerini gerçekleştirmek için kullanılabilir. İlk kredileriniz tükendiğinde hizmeti kullanmaya devam etmek için istediğiniz zaman ek kredi paketleri de satın alabilirsiniz. Krediler iade edilemez ve nakit paraya dönüştürülemez; bunlar yalnızca platformun araçlarına ve özelliklerine erişimi temsil eder."
+        }
+      }
+    },
+    "contact": {
+      "title": "İletişime",
+      "titleHighlight": "Geçin",
+      "subtitle": "Piyasa analizinizi dönüştürmeye hazır mısınız? Bugün bizimle iletişime geçin",
+      "sendMessage": "Bize bir mesaj gönderin",
+      "firstName": "Ad",
+      "lastName": "Soyad",
+      "emailAddress": "E-posta Adresi",
+      "subject": "Konu",
+      "yourMessage": "Mesajınız",
+      "emailUs": "Bize E-posta Gönderin",
+      "callUs": "Bizi Arayın",
+      "businessHours": "Çalışma Saatleri",
+      "businessHoursDesc": "Pzt - Cuma: 09:00 - 18:00 EST\nHafta Sonu: Sadece acil destek"
+    },
+    "chatWidget": {
+      "liveSupport": "Canlı Destek",
+      "greeting": "Merhaba! Bugün size nasıl yardımcı olabilirim?",
+      "placeholder": "Mesajınızı yazın..."
+    },
+    "modals": {
+      "login": {
+        "title": "Hesabınıza Giriş Yapın",
+        "emailPlaceholder": "E-posta Adresi",
+        "passwordPlaceholder": "Şifre",
+        "rememberMe": "Beni hatırla",
+        "forgotPassword": "Şifremi Unuttum?"
+      },
+      "demo": {
+        "title": "İnteraktif Demo",
+        "description": "ScopeZeka'nın grafikleri nasıl analiz ettiğini ve içgörüler sunduğunu keşfedin. Bu demo, kayıt gerektirmeden kullanıcı deneyimini gösterir.",
+        "loading": "Demo yükleniyor..."
+      },
+      "payment": {
+        "title": "Satın Alımınızı Tamamlayın",
+        "firstName": "Ad",
+        "lastName": "Soyad",
+        "emailAddress": "E-posta Adresi",
+        "cardNumber": "Kart Numarası",
+        "mmYy": "AA/YY",
+        "cvc": "CVC",
+        "zipCode": "Posta Kodu",
+        "agreeTerms": "Faturalama şartlarını ve koşullarını kabul ediyorum",
+        "completePayment": "Ödemeyi Tamamla",
+        "securePayment": "🔒 Güvenli Ödeme",
+        "allMajorCards": "💳 Tüm Büyük Kartlar",
+        "guarantee": "✅ 30 Günlük Garanti"
+      }
+    },
+    "footer": {
+      "brandName": "ScopeZeka",
+      "description": "Dünya çapındaki profesyonel yatırımcılar ve analistler için AI destekli Gelişmiş Piyasa İstihbarat Platformu.",
+      "subscribeNewsletter": "Bültenimize abone olun",
+      "termsOfService": "Hizmet Şartları",
+      "privacyPolicy": "Gizlilik Politikası",
+      "cookiePolicy": "Çerez Politikası",
+      "refundPolicy": "İade Politikası",
+      "acceptableUse": "Kabul Edilebilir Kullanım",
+      "copyright": "© 2025 ScopeZeka. Tüm hakları saklıdır. Yalnızca eğitim ve araştırma amaçlıdır.",
+      "disclaimer": "Sorumluluk Reddi: ScopeZeka teknolojik bir araştırma aracıdır ve finansal veya yatırım tavsiyesi sağlamaz.",
+      "businessDetails": {
+        "company": "The Seacus Company LTD",
+        "registration": "Civil & Commercial kanunu kapsamında Samut Prakan Eyaleti İşletme Kayıt Ofisi'nde tüzel kişi olarak kayıtlıdır.",
+        "registrationNumber": "Şirket kayıt numarası: 0115569002129",
+        "email": "suuport@OpenSightai.com",
+        "phone": "+44-7537-106208"
+      }
+    }
+  },
+  "dashboard": {
+    "title": "İçgörüler Kontrol Paneli",
+    "subtitle": "AI destekli piyasa analizi ve eğitim merkeziniz.",
+    "stats": {
+      "totalAnalyses": "Toplam Analizler",
+      "totalAnalysesTrend": "Geçmişinizi görüntüleyin",
+      "accuracyScore": "Doğruluk Skoru",
+      "accuracyScoreTrend": "Yüksek güvenilirlik bazlı",
+      "conversations": "Konuşmalar",
+      "conversationsTrend": "Öğrenme ilerlemesi",
+      "aiInsights": "AI İçgörüleri",
+      "aiInsightsTrend": "Analiz için hazır"
+    },
+    "quickActions": {
+      "analyzeChart": "Grafik Analiz Et",
+      "askAssistant": "Asistan Sor"
+    },
+    "recentAnalyses": {
+      "title": "Son Analizler",
+      "viewAll": "Tümünü Görüntüle",
+      "noAnalyses": "Henüz analiz yok",
+      "noAnalysesDescription": "AI analizine başlamak için ilk grafiğinizi yükleyin",
+      "startAnalyzing": "Analiz Etmeye Başla",
+      "analysis": "Analiz",
+      "viewChart": "Grafiği görüntüle",
+      "noChartAvailable": "Grafik mevcut değil",
+      "status": {
+        "completed": "tamamlandı",
+        "analyzing": "analiz ediliyor",
+        "failed": "başarısız"
+      }
+    },
+    "aiTutor": {
+      "title": "AI Eğitim Asistanı",
+      "description": "Analiz teknikleri, risk yönetimi ve piyasa desenleri hakkında sorular sorun.",
+      "startLearning": "Öğrenmeye Başla",
+      "subtitle": "Piyasa analizi, veri yorumlama ve temeller hakkında bilgi edinin.",
+      "quickStart": "Hızlı Başlangıç",
+      "recentChats": "Son Sohbetler",
+      "welcome": "AI Asistanına Hoş Geldiniz!",
+      "welcomeDescription": "Piyasa analizi, veri yorumlama veya risk değerlendirmesi hakkında bana her şeyi sorabilirsiniz.",
+      "tryAsking": "Şunları deneyin: \"Destek ve direnç nedir?\" veya \"Riski nasıl değerlendiririm?\"",
+      "thinking": "AI Asistanı düşünüyor...",
+      "inputPlaceholder": "Piyasa analizi, veri yorumlama, risk hakkında soru sorun...",
+      "discussion": "Tartışma",
+      "upgradeRequired": "Bu konu Pro ve Expert planlar için mevcuttur. Lütfen paketinizi yükseltin."
+    },
+    "topics": {
+      "technicalAnalysis": "Teknik Analiz",
+      "riskManagement": "Risk Yönetimi",
+      "tradingPsychology": "Ticaret Psikolojisi",
+      "portfolioManagement": "Portföy Yönetimi",
+      "marketFundamentals": "Piyasa Temelleri",
+      "strategyDevelopment": "Strateji Geliştirme"
+    },
+    "marketPulse": {
+      "title": "Piyasa Nabzı",
+      "sentiment": "Piyasa Duyarlılığı",
+      "upward": "Yükseliş",
+      "volatility": "Oynaklık",
+      "moderate": "Orta",
+      "dataIndex": "Veri Endeksi"
+    },
+    "creditsPanel": {
+      "title": "Krediler",
+      "currentPlan": "Mevcut Plan",
+      "creditsRemaining": "Kalan Krediler",
+      "description": "Her analiz 1 kredi kullanır. İstediğiniz zaman yükseltme yapabilir veya kredi ekleyebilirsiniz.",
+      "quickBuy": "Hızlı Kredi Satın Al",
+      "unlimited": "Sınırsız",
+      "creditsCount": "{{count}} kredi",
+      "add": "Ekle",
+      "seeAllOptions": "Tüm kredi seçeneklerini Fiyatlandırma'da görün.",
+      "buyCreditsUpgrade": "Kredi Satın Al / Yükselt",
+      "dialogDescription": "Mevcut plan kullanımınızın özeti.",
+      "remaining": "{{count}} kalan",
+      "manageBilling": "Faturalamayı yönetin ve Fiyatlandırma sayfasında yükseltme yapın."
+    },
+    "navigation": {
+      "menu": "Menü",
+      "quickStats": "Hızlı İstatistikler",
+      "analyses": "Analizler",
+      "accuracy": "Doğruluk",
+      "dashboard": "Kontrol Paneli",
+      "chartAnalysis": "Grafik Analizi",
+      "aiAssistant": "AI Asistanı",
+      "analysisHistory": "Analiz Geçmişi",
+      "package": "Paket",
+      "noPackage": "Yok",
+      "billingSettings": "Faturalama ayarları",
+      "creditsPanel": "Kredi paneli",
+      "adminPanel": "Yönetici Paneli",
+      "plan": "Plan",
+      "platformSubtitle": "Piyasa İçgörüleri Platformu"
+    },
+    "chartAnalysis": {
+      "title": "AI Grafik Analizi",
+      "subtitle": "AI destekli teknik içgörüler için grafik görüntüleri yükleyin.",
+      "dailyUsage": "Günlük Kullanım: {{used}} / {{limit}}",
+      "dailyUsageUnlimited": "Günlük Kullanım: {{used}} / Sınırsız",
+      "unlimited": "Sınırsız",
+      "uploadFailed": "Dosya yüklenemedi. Lütfen tekrar deneyin.",
+      "pleaseUploadFirst": "Lütfen önce bir grafik görüntüsü yükleyin.",
+      "mustLogin": "Grafikleri analiz etmek için giriş yapmalısınız. Lütfen giriş yapın veya kayıt olun.",
+      "analysisFailed": "Grafik analiz edilemedi. Lütfen tekrar deneyin. Hata: {{error}}",
+      "unknownError": "Bilinmeyen hata.",
+      "readyToAnalyze": "Analiz Etmeye Hazır",
+      "uploadedChart": "Yüklenen grafik",
+      "dataSymbol": "Veri Sembolü (İsteğe Bağlı)",
+      "dataSymbolPlaceholder": "örn., DATA/SET, TKR/USD",
+      "analyzeChart": "Grafiği Analiz Et",
+      "reset": "Sıfırla",
+      "pleaseLogin": "Lütfen grafikleri analiz etmek için giriş yapın.",
+      "previousAnalyses": "Önceki Analizler",
+      "chart": "Grafik",
+      "unknown": "Bilinmeyen"
+    },
+    "uploadZone": {
+      "dragDropChart": "Sürükle ve Bırak Grafik",
+      "dropChartHere": "Grafik ekran görüntünüzü buraya bırakın",
+      "browseFiles": "Dosyalara Göz At",
+      "supportedFormats": "PNG, JPG, JPEG formatlarını destekler",
+      "useCamera": "Kamerayı Kullan",
+      "takePhoto": "Grafiğinizin fotoğrafını çekin",
+      "openCamera": "Kamerayı Aç",
+      "perfectForMobile": "Mobil cihazlar için mükemmel"
+    },
+    "history": {
+      "title": "Analiz Geçmişi",
+      "subtitle": "Grafik analiz performansınızı gözden geçirin ve takip edin",
+      "totalAnalyses": "Toplam Analiz",
+      "bullishSignals": "Yükseliş Sinyalleri",
+      "bearishSignals": "Düşüş Sinyalleri",
+      "completed": "Tamamlandı",
+      "successRate": "Başarı Oranı",
+      "searchPlaceholder": "Sembole göre ara...",
+      "loading": "Analiz geçmişi yükleniyor...",
+      "noAnalysesYet": "Henüz analiz yok",
+      "noResultsFound": "Sonuç bulunamadı",
+      "startAnalyzing": "Geçmişinizi oluşturmak için grafik analiz etmeye başlayın",
+      "adjustFilters": "Filtrelerinizi veya arama terimlerinizi ayarlamayı deneyin",
+      "chart": "Grafik",
+      "confidence": "Güven",
+      "entry": "Giriş",
+      "stopLoss": "Stop Loss",
+      "tp1": "TP1",
+      "tp2": "TP2",
+      "viewChart": "Grafiği Görüntüle",
+      "status": {
+        "completed": "tamamlandı",
+        "analyzing": "analiz ediliyor",
+        "failed": "başarısız"
+      },
+      "filters": {
+        "allStatus": "Tüm Durumlar",
+        "completed": "Tamamlandı",
+        "analyzing": "Analiz Ediliyor",
+        "failed": "Başarısız",
+        "allTrends": "Tüm Trendler",
+        "bullish": "Yükseliş",
+        "bearish": "Düşüş",
+        "sideways": "Yatay"
+      }
+    }
+  },
+  "admin": {},
+  "brand": {},
+  "reseller": {}
+}

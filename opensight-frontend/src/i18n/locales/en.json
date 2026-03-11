@@ -1,0 +1,481 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "dashboard": "Dashboard",
+    "login": "Login",
+    "home": "Home",
+    "features": "Features",
+    "pricing": "Pricing",
+    "about": "About",
+    "contact": "Contact",
+    "OpenSightAI": "OpenSightAI",
+    "startFreeTrial": "Start Free Trial",
+    "addToCart": "Add to Cart",
+    "checking": "Checking...",
+    "sendMessage": "Send Message",
+    "subscribe": "Subscribe",
+    "enterYourEmail": "Enter your email",
+    "contactSales": "Contact Sales",
+    "needCustomSolution": "Need a custom solution? We've got you covered.",
+    "loadingPackages": "Loading packages...",
+    "oneTimePayment": "One-time payment",
+    "mostPopular": "Most Popular",
+    "logout": "Logout"
+  },
+  "landing": {
+    "hero": {
+      "title": "Advanced Market",
+      "titleHighlight": "Intelligence",
+      "titleSuffix": "Platform",
+      "subtitle": "Harness the power of AI to analyze market patterns, enhance your market analysis skills, and learn advanced market strategies with our revolutionary platform.",
+      "startFreeTrial": "Start Free Trial",
+      "analysesCompleted": "Analyses Completed",
+      "activeUsers": "Active Users",
+      "accuracyRate": "Accuracy Rate (%)",
+      "countriesServed": "Countries Served"
+    },
+    "features": {
+      "title": "Powerful",
+      "titleHighlight": "AI Features",
+      "subtitle": "Experience the next generation of market analysis with our advanced AI-powered tools",
+      "chartAnalysis": "Chart Analysis",
+      "aiTutor": "AI Tutor",
+      "marketAssessment": "Market Assessment",
+      "portfolio": "Portfolio Tools",
+      "liveChartAnalytics": {
+        "title": "Live Chart Analytics Tool",
+        "description": "Upload any chart screenshot and get comprehensive analysis with precise market insights, support/resistance levels, and analysis evaluation recommendations.",
+        "indicators": "50+ Technical Indicators",
+        "indicatorsDesc": "RSI, MACD, Bollinger Bands, Moving Averages, and more",
+        "patternRecognition": "Pattern Recognition",
+        "patternRecognitionDesc": "Triangles, channels, flags, head & shoulders, and complex patterns",
+        "marketAssessmentTools": "Market Assessment Tools",
+        "marketAssessmentToolsDesc": "Automatic calculation of optimal analysis evaluation levels",
+        "tryChartAnalyzer": "Try Chart Analyzer"
+      },
+      "uploadChartScreenshot": "Upload Chart Screenshot",
+      "dragDropOrClick": "Drag & drop or click to select your chart image",
+      "freeDemoAnalyses": "Free Demo Analyses",
+      "analyzingChart": "Analyzing Chart...",
+      "analysisComplete": "Analysis Complete!",
+      "analysisCompleteDesc": "Your chart has been analyzed successfully.",
+      "aiTutorSection": {
+        "title": "Learn from AI Expert",
+        "description": "Get personalized education with our AI agent teacher that adapts to your learning style and progress.",
+        "personalizedLearning": "Personalized Learning Paths",
+        "personalizedLearningDesc": "Customized curriculum based on your experience level",
+        "progressTracking": "Progress Tracking",
+        "progressTrackingDesc": "Track your learning progress with certificates and badges",
+        "communityLearning": "Community Learning",
+        "communityLearningDesc": "Join study groups and learn with other professionals",
+        "startLearning": "Start Learning",
+        "aiAgentTeacher": "AI Agent Teacher",
+        "askAnything": "Ask me anything about markets...",
+        "freeTutorMessages": "Free Tutor Messages"
+      },
+      "marketAssessmentSection": {
+        "title": "Advanced Market Assessment",
+        "description": "Enhance your analysis with our comprehensive market assessment tools and calculators.",
+        "positionSizing": "Position Sizing Calculator",
+        "positionSizingDesc": "Calculate optimal position sizes based on your analysis tolerance",
+        "useCalculator": "Use Calculator",
+        "marketConditionAnalysis": "Market Condition Analysis",
+        "marketConditionAnalysisDesc": "Analyze potential market conditions before entering any position",
+        "assessMarket": "Assess Market",
+        "portfolioOptimization": "Portfolio Optimization",
+        "portfolioOptimizationDesc": "Optimize your portfolio for maximum analysis-adjusted returns",
+        "optimizePortfolio": "Optimize Portfolio"
+      },
+      "portfolioSection": {
+        "title": "Portfolio Management Tools",
+        "description": "Track, analyze, and optimize your entire portfolio with our professional-grade tools.",
+        "totalPortfolioValue": "Total Portfolio Value",
+        "monthlyReturn": "Monthly Return",
+        "sharpeRatio": "Sharpe Ratio",
+        "maxDrawdown": "Max Drawdown"
+      }
+    },
+    "pricing": {
+      "title": "Choose Your",
+      "titleHighlight": "Plan",
+      "subtitle": "Credits represent usage units for accessing analytical features. They have no monetary value, are non-transferable, and cannot be redeemed for cash.",
+      "packages": {
+        "starter": {
+          "name": "Starter",
+          "description": "Perfect for beginners exploring market analysis",
+          "features": {
+            "0": "Live chart analytics (10 analyses)",
+            "1": "AI agent teacher (basic access)",
+            "2": "Education center access",
+            "3": "Email support (48-hour response)",
+            "4": "Standard analysis tools and features",
+            "5": "Basic market research insights",
+            "6": "Mobile app access",
+            "7": "Analysis history (30 days)",
+            "8": "Export to PDF"
+          }
+        },
+        "professional": {
+          "name": "Professional",
+          "description": "Most popular choice for serious traders",
+          "features": {
+            "0": "Live chart analytics (50 analyses)",
+            "1": "AI agent teacher (advanced features)",
+            "2": "Full education center access",
+            "3": "Email support (24-hour response)",
+            "4": "Advanced analysis tools and features",
+            "5": "Comprehensive market research insights",
+            "6": "Mobile app access",
+            "7": "Analysis history (6 months)",
+            "8": "Export to Excel/PDF",
+            "9": "Multiple data watchlists",
+            "10": "Advanced assessment suite",
+            "11": "Pattern recognition tools",
+            "12": "Custom analysis templates"
+          }
+        },
+        "expert": {
+          "name": "Expert",
+          "description": "Full access to all premium features",
+          "features": {
+            "0": "Live chart analytics (unlimited analyses)",
+            "1": "AI agent teacher (premium features)",
+            "2": "Full education center with premium content",
+            "3": "Priority email support (immediate response)",
+            "4": "Professional-grade analysis tools",
+            "5": "Premium market research insights",
+            "6": "Mobile and desktop app access",
+            "7": "Analysis history (unlimited)",
+            "8": "Export to Excel/PDF/CSV",
+            "9": "Multiple data watchlists (unlimited)",
+            "10": "Advanced assessment suite",
+            "11": "Pattern recognition tools",
+            "12": "Custom analysis templates",
+            "13": "API access for integrations",
+            "14": "White-label options",
+            "15": "Priority feature requests",
+            "16": "Advanced market indicators",
+            "17": "Real-time data feeds",
+            "18": "Portfolio tracking tools"
+          }
+        }
+      }
+    },
+    "howItWorks": {
+      "title": "How It",
+      "titleHighlight": "Works",
+      "subtitle": "Get started with OpenSightAI in three simple steps",
+      "step1": {
+        "title": "Upload Your Chart",
+        "description": "Simply drag and drop any chart screenshot or image file into our AI analyzer."
+      },
+      "step2": {
+        "title": "AI Analysis",
+        "description": "Our advanced AI processes your chart and identifies patterns, trends, and opportunities."
+      },
+      "step3": {
+        "title": "Get Results",
+        "description": "Receive comprehensive analysis with market insights and educational analysis evaluation levels."
+      }
+    },
+    "testimonials": {
+      "title": "What Our",
+      "titleHighlight": "Clients Say",
+      "subtitle": "Trusted by thousands of professionals worldwide",
+      "testimonial1": {
+        "role": "Portfolio Manager",
+        "quote": "OpenSightAI has revolutionized my analysis workflow. The AI accuracy is incredible and has significantly improved my decision-making process."
+      },
+      "testimonial2": {
+        "role": "Investment Analyst",
+        "quote": "The AI agent teacher feature is amazing! I've learned more in 3 months than I did in years of self-study. The personalized approach really works."
+      },
+      "testimonial3": {
+        "role": "Fund Manager",
+        "quote": "The market assessment tools are top-notch. OpenSightAI has helped me optimize my portfolio and reduce drawdowns significantly."
+      },
+      "viewAllReviews": "View All Reviews"
+    },
+    "about": {
+      "title": "About",
+      "titleHighlight": "OpenSightAI",
+      "description": "We're a team of AI researchers, market experts, and technology innovators dedicated to democratizing advanced market analysis. Our mission is to provide institutional-grade tools to individual investors and professionals worldwide.",
+      "mission": {
+        "title": "Our Mission",
+        "description": "Empower every investor with AI-powered market intelligence"
+      },
+      "vision": {
+        "title": "Our Vision",
+        "description": "Become the global standard for AI-driven market analysis"
+      },
+      "values": {
+        "title": "Our Values",
+        "description": "Transparency, innovation, and client success above all"
+      },
+      "learnMore": "Learn More About Us",
+      "technology": {
+        "title": "Our Technology",
+        "aiAccuracy": "AI Accuracy",
+        "processingSpeed": "Processing Speed",
+        "userSatisfaction": "User Satisfaction",
+        "award": "Winner of 2024 FinTech Innovation Award"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked",
+      "titleHighlight": "Questions",
+      "subtitle": "Find answers to common questions about OpenSightAI",
+      "questions": {
+        "accuracy": {
+          "question": "How accurate is the AI analysis?",
+          "answer": "Our AI system maintains a 98.5% accuracy rate across all market conditions. The system is continuously trained on millions of chart patterns and market data points."
+        },
+        "purchase": {
+          "question": "Is this a one-time purchase?",
+          "answer": "All our packages are one-time purchases with lifetime access. There are no fees or subscription charges."
+        },
+        "formats": {
+          "question": "What chart formats are supported?",
+          "answer": "We support all major image formats including PNG, JPG, JPEG, GIF, and WebP. Our AI can analyze charts from any platform or broker."
+        },
+        "refunds": {
+          "question": "Do you offer refunds?",
+          "answer": "We offer a 30-day money-back guarantee. If you're not completely satisfied within the first 30 days, we'll provide a full refund."
+        },
+        "credits": {
+          "question": "How does the credit system work on OpenSightAI?",
+          "answer": "OpenSightAI uses a credit-based system that allows users to access and use the platform's AI tools. When you buy one of our access plans (such as the plan with 20 credits), those credits are added to your account and can be used to perform AI tasks. You can also purchase additional credit packages anytime to continue using the service once your initial credits are consumed. Credits are not refundable and cannot be converted to cash; they simply represent access to the platform's tools and features."
+        }
+      }
+    },
+    "contact": {
+      "title": "Get In",
+      "titleHighlight": "Touch",
+      "subtitle": "Ready to transform your market analysis? Contact us today",
+      "sendMessage": "Send us a message",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "emailAddress": "Email Address",
+      "subject": "Subject",
+      "yourMessage": "Your Message",
+      "emailUs": "Email Us",
+      "callUs": "Call Us",
+      "businessHours": "Business Hours",
+      "businessHoursDesc": "Mon - Fri: 9:00 AM - 6:00 PM EST\nWeekend: Emergency support only"
+    },
+    "chatWidget": {
+      "liveSupport": "Live Support",
+      "greeting": "Hello! How can I help you today?",
+      "placeholder": "Type your message..."
+    },
+    "modals": {
+      "login": {
+        "title": "Login to Your Account",
+        "emailPlaceholder": "Email Address",
+        "passwordPlaceholder": "Password",
+        "rememberMe": "Remember me",
+        "forgotPassword": "Forgot Password?"
+      },
+      "demo": {
+        "title": "Interactive Demo",
+        "description": "Explore how OpenSightAI analyzes charts and delivers insights. This demo showcases the user experience without requiring signup.",
+        "loading": "Loading demo..."
+      },
+      "payment": {
+        "title": "Complete Your Purchase",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "emailAddress": "Email Address",
+        "cardNumber": "Card Number",
+        "mmYy": "MM/YY",
+        "cvc": "CVC",
+        "zipCode": "ZIP Code",
+        "agreeTerms": "I agree to the billing terms and conditions",
+        "completePayment": "Complete Payment",
+        "securePayment": "🔒 Secure Payment",
+        "allMajorCards": "💳 All Major Cards",
+        "guarantee": "✅ 30-Day Guarantee"
+      }
+    },
+    "footer": {
+      "brandName": "OpenSightAI",
+      "description": "Advanced Market Intelligence Platform powered by AI for professional investors and analysts worldwide.",
+      "subscribeNewsletter": "Subscribe to our newsletter",
+      "termsAndConditions": "Terms and Conditions",
+      "privacyPolicy": "Privacy Policy",
+      "cookiePolicy": "Cookie Policy",
+      "refundPolicy": "Refund Policy",
+      "acceptableUse": "Acceptable Use",
+      "copyright": "© 2026 OpenSightAI. All rights reserved. For educational and research purposes only.",
+      "disclaimer": "Disclaimer: OpenSightAI is a technological research tool and does not provide financial or investment advice."
+    }
+  },
+  "dashboard": {
+    "title": "Insights Dashboard",
+    "subtitle": "Your hub for AI-powered market analysis and education.",
+    "stats": {
+      "totalAnalyses": "Total Analyses",
+      "totalAnalysesTrend": "View your history",
+      "accuracyScore": "Accuracy Score",
+      "accuracyScoreTrend": "Based on high-confidence",
+      "conversations": "Conversations",
+      "conversationsTrend": "Learning progress",
+      "aiInsights": "AI Insights",
+      "aiInsightsTrend": "Ready for analysis"
+    },
+    "quickActions": {
+      "analyzeChart": "Analyze Chart",
+      "askAssistant": "Ask Assistant"
+    },
+    "recentAnalyses": {
+      "title": "Recent Analyses",
+      "viewAll": "View All",
+      "noAnalyses": "No analyses yet",
+      "noAnalysesDescription": "Upload your first chart to get started with AI analysis",
+      "startAnalyzing": "Start Analyzing",
+      "analysis": "Analysis",
+      "viewChart": "View chart",
+      "noChartAvailable": "No chart available",
+      "status": {
+        "completed": "completed",
+        "analyzing": "analyzing",
+        "failed": "failed"
+      }
+    },
+    "aiTutor": {
+      "title": "AI Education Assistant",
+      "description": "Ask about analysis techniques, risk management, and market patterns.",
+      "startLearning": "Start Learning",
+      "subtitle": "Learn about market analysis, data interpretation, and fundamentals.",
+      "quickStart": "Quick Start",
+      "recentChats": "Recent Chats",
+      "welcome": "Welcome to the AI Assistant!",
+      "welcomeDescription": "Ask me anything about market analysis, data interpretation, or risk assessment.",
+      "tryAsking": "Try asking: \"What is support and resistance?\" or \"How do I assess risk?\"",
+      "thinking": "AI Assistant is thinking...",
+      "inputPlaceholder": "Ask about market analysis, data interpretation, risk...",
+      "discussion": "Discussion",
+      "upgradeRequired": "This topic is available for Pro and Expert plans. Please upgrade your package."
+    },
+    "topics": {
+      "technicalAnalysis": "Technical Analysis",
+      "riskManagement": "Risk Management",
+      "tradingPsychology": "Trading Psychology",
+      "portfolioManagement": "Portfolio Management",
+      "marketFundamentals": "Market Fundamentals",
+      "strategyDevelopment": "Strategy Development"
+    },
+    "marketPulse": {
+      "title": "Market Pulse",
+      "sentiment": "Market Sentiment",
+      "upward": "Upward",
+      "volatility": "Volatility",
+      "moderate": "Moderate",
+      "dataIndex": "Data Index"
+    },
+    "creditsPanel": {
+      "title": "Credits",
+      "currentPlan": "Current Plan",
+      "creditsRemaining": "Credits Remaining",
+      "description": "Each analysis uses 1 credit. Upgrade or add credits anytime.",
+      "quickBuy": "Quick Buy Credits",
+      "unlimited": "Unlimited",
+      "creditsCount": "{{count}} credits",
+      "add": "Add",
+      "seeAllOptions": "See all credit options in Pricing.",
+      "buyCreditsUpgrade": "Buy Credits / Upgrade",
+      "dialogDescription": "Overview of your current plan usage.",
+      "remaining": "{{count}} remaining",
+      "manageBilling": "Manage billing and upgrade on the Pricing page."
+    },
+    "navigation": {
+      "menu": "Menu",
+      "quickStats": "Quick Stats",
+      "analyses": "Analyses",
+      "accuracy": "Accuracy",
+      "dashboard": "Dashboard",
+      "chartAnalysis": "Chart Analysis",
+      "aiAssistant": "AI Assistant",
+      "analysisHistory": "Analysis History",
+      "package": "Package",
+      "noPackage": "No",
+      "billingSettings": "Billing settings",
+      "creditsPanel": "Credits panel",
+      "adminPanel": "Admin Panel",
+      "plan": "Plan",
+      "platformSubtitle": "Market Insights Platform"
+    },
+    "chartAnalysis": {
+      "title": "AI Chart Analysis",
+      "subtitle": "Upload chart images for AI-powered technical insights.",
+      "dailyUsage": "Daily Usage: {{used}} / {{limit}}",
+      "dailyUsageUnlimited": "Daily Usage: {{used}} / Unlimited",
+      "unlimited": "Unlimited",
+      "uploadFailed": "Failed to upload file. Please try again.",
+      "pleaseUploadFirst": "Please upload a chart image first.",
+      "mustLogin": "You must be logged in to analyze charts. Please log in or sign up.",
+      "analysisFailed": "Failed to analyze chart. Please try again. Error: {{error}}",
+      "unknownError": "Unknown error.",
+      "readyToAnalyze": "Ready to Analyze",
+      "uploadedChart": "Uploaded chart",
+      "dataSymbol": "Data Symbol (Optional)",
+      "dataSymbolPlaceholder": "e.g., DATA/SET, TKR/USD",
+      "analyzeChart": "Analyze Chart",
+      "reset": "Reset",
+      "pleaseLogin": "Please log in to analyze charts.",
+      "previousAnalyses": "Previous Analyses",
+      "chart": "Chart",
+      "unknown": "Unknown"
+    },
+    "uploadZone": {
+      "dragDropChart": "Drag & Drop Chart",
+      "dropChartHere": "Drop your chart screenshot here",
+      "browseFiles": "Browse Files",
+      "supportedFormats": "Supports PNG, JPG, JPEG formats",
+      "useCamera": "Use Camera",
+      "takePhoto": "Take a photo of your chart",
+      "openCamera": "Open Camera",
+      "perfectForMobile": "Perfect for mobile devices"
+    },
+    "history": {
+      "title": "Analysis History",
+      "subtitle": "Review and track your chart analysis performance",
+      "totalAnalyses": "Total Analyses",
+      "bullishSignals": "Bullish Signals",
+      "bearishSignals": "Bearish Signals",
+      "completed": "Completed",
+      "successRate": "Success Rate",
+      "searchPlaceholder": "Search by symbol...",
+      "loading": "Loading analysis history...",
+      "noAnalysesYet": "No analyses yet",
+      "noResultsFound": "No results found",
+      "startAnalyzing": "Start analyzing charts to build your history",
+      "adjustFilters": "Try adjusting your filters or search terms",
+      "chart": "Chart",
+      "confidence": "Confidence",
+      "entry": "Entry",
+      "stopLoss": "Stop Loss",
+      "tp1": "TP1",
+      "tp2": "TP2",
+      "viewChart": "View Chart",
+      "status": {
+        "completed": "completed",
+        "analyzing": "analyzing",
+        "failed": "failed"
+      },
+      "filters": {
+        "allStatus": "All Status",
+        "completed": "Completed",
+        "analyzing": "Analyzing",
+        "failed": "Failed",
+        "allTrends": "All Trends",
+        "bullish": "Bullish",
+        "bearish": "Bearish",
+        "sideways": "Sideways"
+      }
+    }
+  },
+  "admin": {},
+  "brand": {},
+  "reseller": {}
+}

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenSightAI - Customer Reviews</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #FFD700;
+            --orange: #FF6B35;
+            --amber: #FFA726;
+        }
+
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1, h2, h3, h4, h5, h6, .heading-font {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .gradient-gold {
+            background: linear-gradient(135deg, var(--gold), var(--orange));
+        }
+
+        .text-gold {
+            color: var(--gold);
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--gold);
+            margin-bottom: 24px;
+        }
+
+        .page-button {
+            background: white;
+            color: var(--gold);
+            border: 2px solid var(--gold);
+            border-radius: 8px;
+            padding: 8px 16px;
+            margin: 0 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .page-button.active {
+            background: var(--gold);
+            color: white;
+        }
+
+        .page-button:hover {
+            background: var(--gold);
+            color: white;
+        }
+
+        .review-page {
+            display: none;
+        }
+
+        .review-page.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header Section -->
+    <div class="bg-white py-16 px-6">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="flex items-center justify-center space-x-3 mb-6">
+                <div class="w-12 h-12 gradient-gold rounded-lg flex items-center justify-center">
+                    <i class="fas fa-chart-line text-white text-2xl"></i>
+                </div>
+                <h1 class="text-5xl font-bold heading-font text-gray-800">OpenSightAI</h1>
+            </div>
+            <h2 class="text-4xl font-bold heading-font text-gray-800 mb-4">Customer Reviews</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Trusted by thousands of financial professionals worldwide
+            </p>
+        </div>
+    </div>
+
+    <!-- Reviews Section -->
+    <div class="py-12 px-6">
+        <div class="max-w-6xl mx-auto">
+            
+            <!-- Page 1 -->
+            <div id="page-1" class="review-page active">
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <div class="testimonial-card">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face" alt="Jonathan Reed" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Jonathan Reed</h4>
+                                <p class="text-gray-600 text-sm">Senior Portfolio Manager</p>
+                            </div>
+                        </div>
+                        <div class="flex text-gold mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 italic">
+                            "OpenSightAI has completely transformed our investment analysis process. The AI's ability to identify market patterns with exceptional accuracy has given us a significant competitive edge. Our portfolio performance has improved substantially since implementation."
+                        </p>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=60&h=60&fit=crop&crop=face" alt="Dr. Sarah Chen" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Dr. Sarah Chen</h4>
+                                <p class="text-gray-600 text-sm">Chief Investment Officer</p>
+                            </div>
+                        </div>
+                        <div class="flex text-gold mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 italic">
+                            "As someone who's been in finance for 20 years, I've never seen anything like OpenSightAI. The educational component is exceptional - it's like having a PhD-level market analyst available 24/7. The platform delivers exceptional value."
+                        </p>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face" alt="Marcus Thompson" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Marcus Thompson</h4>
+                                <p class="text-gray-600 text-sm">Hedge Fund Director</p>
+                            </div>
+                        </div>
+                        <div class="flex text-gold mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 italic">
+                            "The institutional-grade analysis capabilities are remarkable. We've integrated OpenSightAI into our daily operations, and it consistently identifies opportunities our team might have missed. The return on investment has been extraordinary."
+                        </p>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=60&h=60&fit=crop&crop=face" alt="Alexandra Mitchell" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Alexandra Mitchell</h4>
+                                <p class="text-gray-600 text-sm">Senior Technical Analyst</p>
+                            </div>
+                        </div>
+                        <div class="flex text-gold mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 italic">
+                            "The pattern recognition technology is absolutely mind-blowing. OpenSightAI identifies complex formations like head-and-shoulders, triangles, and flag patterns with incredible precision. It's like having years of experience compressed into instant analysis."
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page 2 -->
+            <div id="page-2" class="review-page">
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <div class="testimonial-card">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=60&h=60&fit=crop&crop=face" alt="Robert Kim" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Robert Kim</h4>
+                                <p class="text-gray-600 text-sm">Quantitative Researcher</p>
+                            </div>
+                        </div>
+                        <div class="flex text-gold mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 italic">
+                            "I've tested dozens of analysis tools, but nothing comes close to OpenSightAI's accuracy. The AI processes over 50 technical indicators simultaneously and presents clear, actionable insights. It's revolutionized how we approach market research."
+                        </p>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=60&h=60&fit=crop&crop=face" alt="Linda Foster" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Linda Foster</h4>
+                                <p class="text-gray-600 text-sm">Market Strategist</p>
+                            </div>
+                        </div>
+                        <div class="flex text-gold mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 italic">
+                            "The real-time analysis capabilities are game-changing. Whether I upload a chart from TradingView, MetaTrader, or any other platform, OpenSightAI delivers consistent, professional-grade analysis in seconds. The time savings alone justify the investment."
+                        </p>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=60&h=60&fit=crop&crop=face" alt="James Wilson" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">James Wilson</h4>
+                                <p class="text-gray-600 text-sm">Junior Investment Analyst</p>
+                            </div>
+                        </div>
+                        <div class="flex text-gold mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 italic">
+                            "The AI Agent Teacher is incredible! I went from novice to confident analyst in just 3 months. The personalized learning approach adapted to my pace, and now I can identify market opportunities that senior analysts miss. It's like having a personal mentor available 24/7."
+                        </p>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=60&h=60&fit=crop&crop=face" alt="David Park" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">David Park</h4>
+                                <p class="text-gray-600 text-sm">Trading Coach</p>
+                            </div>
+                        </div>
+                        <div class="flex text-gold mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 italic">
+                            "I use OpenSightAI to train new analysts, and the results are phenomenal. Students learn complex market concepts 5x faster than traditional methods. The AI explains everything in simple terms while maintaining technical accuracy. It's the future of financial education."
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page 3 -->
+            <div id="page-3" class="review-page">
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <div class="testimonial-card">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=60&h=60&fit=crop&crop=face" alt="Catherine Moore" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Catherine Moore</h4>
+                                <p class="text-gray-600 text-sm">Risk Management Director</p>
+                            </div>
+                        </div>
+                        <div class="flex text-gold mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 italic">
+                            "The market assessment tools are exceptional for evaluation. OpenSightAI helps us identify potential market conditions before they impact our positions. Our analysis accuracy has improved significantly since implementation."
+                        </p>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=60&h=60&fit=crop&crop=face" alt="Andrew Liu" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Andrew Liu</h4>
+                                <p class="text-gray-600 text-sm">Portfolio Optimization Specialist</p>
+                            </div>
+                        </div>
+                        <div class="flex text-gold mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 italic">
+                            "The portfolio tracking and optimization features are world-class. OpenSightAI analyzes correlations, volatility, and market conditions to suggest optimal allocations. Our Sharpe ratio improved significantly after following the AI's recommendations."
+                        </p>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1546512565-39d4dc75e556?w=60&h=60&fit=crop&crop=face" alt="Rachel Stevens" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Rachel Stevens</h4>
+                                <p class="text-gray-600 text-sm">Compliance Officer</p>
+                            </div>
+                        </div>
+                        <div class="flex text-gold mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 italic">
+                            "What impressed me most is the platform's compliance-friendly approach. All analysis focuses on education and market assessment rather than predictions. It's perfect for institutional use and meets all regulatory requirements. The documentation is comprehensive."
+                        </p>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?w=60&h=60&fit=crop&crop=face" alt="Hans Mueller" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Hans Mueller</h4>
+                                <p class="text-gray-600 text-sm">European Fund Manager</p>
+                            </div>
+                        </div>
+                        <div class="flex text-gold mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 italic">
+                            "OpenSightAI works flawlessly across all European markets. From DAX to FTSE, the AI provides consistent, accurate analysis regardless of the instrument or timeframe. Our fund's performance has improved significantly."
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page 4 -->
+            <div id="page-4" class="review-page">
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <div class="testimonial-card">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=60&h=60&fit=crop&crop=face" alt="Yuki Tanaka" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Yuki Tanaka</h4>
+                                <p class="text-gray-600 text-sm">Asia-Pacific Strategist</p>
+                            </div>
+                        </div>
+                        <div class="flex text-gold mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 italic">
+                            "The platform's ability to analyze Asian markets is impressive. Whether it's Nikkei, Hang Seng, or emerging markets, OpenSightAI delivers accurate insights. The one-time payment model is perfect for our budget."
+                        </p>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&h=60&fit=crop&crop=face" alt="Thomas Anderson" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Thomas Anderson</h4>
+                                <p class="text-gray-600 text-sm">Investment Committee Chairman</p>
+                            </div>
+                        </div>
+                        <div class="flex text-gold mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 italic">
+                            "After 6 months with OpenSightAI, our investment committee's decision-making has improved dramatically. The AI provides objective, data-driven analysis that removes emotional bias from our process. Every member now relies on the platform."
+                        </p>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?w=60&h=60&fit=crop&crop=face" alt="Anna Brown" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Anna Brown</h4>
+                                <p class="text-gray-600 text-sm">Senior Analyst</p>
+                            </div>
+                        </div>
+                        <div class="flex text-gold mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 italic">
+                            "The speed and accuracy of OpenSightAI is remarkable. I can get high-quality insights on any chart within seconds. The educational value alone makes this platform worth every penny."
+                        </p>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?w=60&h=60&fit=crop&crop=face" alt="Chris Lee" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Chris Lee</h4>
+                                <p class="text-gray-600 text-sm">Market Research Analyst</p>
+                            </div>
+                        </div>
+                        <div class="flex text-gold mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 italic">
+                            "OpenSightAI has become an essential part of my daily workflow. The analysis is reliable, accurate, and presented in a clear, professional format. I use it every single day without fail."
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page 5 -->
+            <div id="page-5" class="review-page">
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <div class="testimonial-card">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1544006659-f0b21884ce1d?w=60&h=60&fit=crop&crop=face" alt="Sofia Turner" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Sofia Turner</h4>
+                                <p class="text-gray-600 text-sm">Portfolio Analyst</p>
+                            </div>
+                        </div>
+                        <div class="flex text-gold mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 italic">
+                            "The education center has been invaluable for our junior team. OpenSightAI's learning modules helped our new analysts develop advanced skills quickly. The knowledge transfer capabilities are exceptional."
+                        </p>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=60&h=60&fit=crop&crop=face" alt="Mark Evans" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Mark Evans</h4>
+                                <p class="text-gray-600 text-sm">Quantitative Researcher</p>
+                            </div>
+                        </div>
+                        <div class="flex text-gold mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 italic">
+                            "The pattern recognition technology is absolutely incredible. OpenSightAI identifies complex market formations with precision that rivals the best analysts. It saves us countless hours of manual analysis."
+                        </p>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=60&h=60&fit=crop&crop=face" alt="Daniel Green" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Daniel Green</h4>
+                                <p class="text-gray-600 text-sm">Senior Market Analyst</p>
+                            </div>
+                        </div>
+                        <div class="flex text-gold mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 italic">
+                            "OpenSightAI has become a must-have tool for technical analysis. The depth of insight and educational value make it indispensable for serious market professionals. Highly recommended."
+                        </p>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=60&h=60&fit=crop&crop=face" alt="Olivia Harris" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Olivia Harris</h4>
+                                <p class="text-gray-600 text-sm">Investment Research Director</p>
+                            </div>
+                        </div>
+                        <div class="flex text-gold mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 italic">
+                            "The consistency and quality of OpenSightAI's analysis is outstanding. The user experience is seamless, and the results are always professionally presented. It's transformed our research capabilities."
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="flex justify-center mt-12 space-x-2">
+                <button class="page-button active" onclick="showPage(1)">1</button>
+                <button class="page-button" onclick="showPage(2)">2</button>
+                <button class="page-button" onclick="showPage(3)">3</button>
+                <button class="page-button" onclick="showPage(4)">4</button>
+                <button class="page-button" onclick="showPage(5)">5</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16 px-6">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="flex items-center justify-center space-x-3 mb-6">
+                <div class="w-10 h-10 gradient-gold rounded-lg flex items-center justify-center">
+                    <i class="fas fa-chart-line text-white text-xl"></i>
+                </div>
+                <h3 class="text-3xl font-bold heading-font">OpenSightAI</h3>
+            </div>
+            <p class="text-xl text-gray-300 mb-8">Advanced Market Intelligence Platform</p>
+            
+            <div class="space-y-4 text-lg">
+                <p class="flex items-center justify-center space-x-2">
+                    <span>🏆</span>
+                    <span>Winner of 2024 FinTech Innovation Award</span>
+                </p>
+                <p class="flex items-center justify-center space-x-2">
+                    <span>🔒</span>
+                    <span>Bank-Grade Security</span>
+                </p>
+                <p class="flex items-center justify-center space-x-2">
+                    <span>✅</span>
+                    <span>Regulatory Compliant</span>
+                </p>
+            </div>
+            
+            <div class="mt-8 pt-8 border-t border-gray-700">
+                <p class="text-gray-400">© 2024 OpenSightAI. All rights reserved. For educational and research purposes only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showPage(pageNum) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.review-page');
+            pages.forEach(page => page.classList.remove('active'));
+            
+            // Show selected page
+            document.getElementById(`page-${pageNum}`).classList.add('active');
+            
+            // Update buttons
+            const buttons = document.querySelectorAll('.page-button');
+            buttons.forEach(button => button.classList.remove('active'));
+            buttons[pageNum - 1].classList.add('active');
+        }
+    </script>
+</body>
+</html>
