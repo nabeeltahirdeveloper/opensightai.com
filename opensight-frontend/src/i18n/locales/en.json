@@ -117,7 +117,7 @@
         },
         "professional": {
           "name": "Professional",
-          "description": "Most popular choice for serious traders",
+          "description": "Most popular choice for serious users",
           "features": {
             "0": "Live chart analytics (50 analyses)",
             "1": "AI agent teacher (advanced features)",

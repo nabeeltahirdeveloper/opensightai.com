@@ -27,7 +27,7 @@ export const packages = [
     price: 129,
     currency: '$',
     originalPrice: 500,
-    description: 'Most popular choice for serious traders',
+    description: 'Most popular choice for serious users',
     features: [
       'Live chart analytics (50 analyses)',
       'AI agent teacher (advanced features)',

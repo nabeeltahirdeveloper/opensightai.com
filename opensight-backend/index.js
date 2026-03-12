@@ -8353,7 +8353,7 @@ app.get('/api/cart/packages', async (req, res) => {
         name: 'Professional',
         price: 129,
         currency: '$',
-        description: 'Most popular choice for serious traders',
+        description: 'Most popular choice for serious users',
         popular: true,
         features: [
           'Live chart analytics (50 analyses)',
@@ -15064,7 +15064,7 @@ async function seedPackages() {
         price: 129,
         currency: '$',
         type: 'package',
-        description: 'Most popular choice for serious traders',
+        description: 'Most popular choice for serious users',
         features: JSON.stringify([
           'Live chart analytics (50 analyses)',
           'AI agent teacher (advanced features)',

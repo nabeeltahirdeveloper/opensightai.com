@@ -34,7 +34,7 @@ const FEATURES = [
   { Icon: Layers,      title: 'Auto Indicators',       stat: '50+',    sub: 'computed',     desc: 'RSI, MACD, Fibonacci, Ichimoku — every indicator read, computed, and explained for you.' },
   { Icon: TrendingUp,  title: 'Any Market',            stat: '24',     sub: 'asset classes', desc: 'Stocks, crypto, forex, commodities — paste any chart from any broker, anywhere.' },
   { Icon: ShieldCheck, title: 'Private & Secure',      stat: '100%',   sub: 'encrypted',    desc: 'Your charts are never stored or sold. GDPR-conscious infrastructure, always.' },
-  { Icon: ArrowUpRight,'title': 'Actionable Output',   stat: '15K+',   sub: 'traders',      desc: 'Every analysis ends with clear entry/exit logic — not raw data dumps.' },
+  { Icon: ArrowUpRight,'title': 'Actionable Output',   stat: '15K+',   sub: 'users',      desc: 'Every analysis ends with clear entry/exit logic — not raw data dumps.' },
 ]
 
 const COMPARE = [
@@ -96,7 +96,7 @@ export default function WhyChooseUs() {
             </p>
             {/* Inline stats */}
             <div className="flex flex-wrap gap-6">
-              {[['98.5%','Accuracy'],['< 2s','Per analysis'],['50+','Indicators'],['15K+','Active traders']].map(([v, l]) => (
+              {[['98.5%','Accuracy'],['< 2s','Per analysis'],['50+','Indicators'],['15K+','Active users']].map(([v, l]) => (
                 <div key={l}>
                   <div className="text-2xl font-extrabold leading-none" style={{ color: gold }}>{v}</div>
                   <div className="text-xs mt-0.5 font-medium" style={{ color: sub }}>{l}</div>
@@ -205,7 +205,7 @@ export default function WhyChooseUs() {
                 Smarter analysis.<br />Faster decisions.
               </h3>
               <p className="text-[13px] leading-relaxed mb-6" style={{ color: sub }}>
-                Join 15,000+ traders who replaced manual chart reading with an AI that never
+                Join 15,000+ users who replaced manual chart reading with an AI that never
                 misses a pattern, never needs a break, and never second-guesses.
               </p>
               <div className="flex flex-col gap-2 mb-7">

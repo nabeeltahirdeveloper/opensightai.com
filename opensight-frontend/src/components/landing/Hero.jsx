@@ -324,7 +324,7 @@ function RightPanel() {
           ))}
         </div>
         <div>
-          <p style={{ fontSize:12, fontWeight:700, color:'var(--ink)', lineHeight:1, marginBottom:2 }}>15,240 traders</p>
+          <p style={{ fontSize:12, fontWeight:700, color:'var(--ink)', lineHeight:1, marginBottom:2 }}>15,240 Users</p>
           <div style={{ display:'flex', alignItems:'center', gap:4 }}>
             <span style={{ width:5, height:5, borderRadius:'50%', background:'#22C55E', display:'inline-block', animation:'blink 1.5s infinite' }} />
             <span style={{ fontSize:9, color:'var(--muted)' }}>Active now</span>
@@ -476,7 +476,7 @@ export default function Hero() {
           <div className="hs-stats" style={{ animation:'fadeUp .6s .34s ease both' }}>
             {[
               { ico:'◈', v:50, s:'K+', l:'Analyses Completed', accent:'#F5A623', sub:'+12% this week' },
-              { ico:'◉', v:15, s:'K+', l:'Active Traders',     accent:'#22C55E', sub:'Online now'     },
+              { ico:'◉', v:15, s:'K+', l:'Active Users',     accent:'#22C55E', sub:'Online now'     },
               { ico:'◆', v:98, s:'%',  l:'Accuracy Rate',      accent:'#F5A623', sub:'Industry best'  },
             ].map((st, i) => (
               <div key={i} style={{ display:'flex', alignItems:'center', gap:12, borderRadius:14, padding:'12px 14px', background:'var(--card)', border:'1px solid rgba(245,166,35,.12)', transition:'all .28s', cursor:'default' }}
